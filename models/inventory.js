@@ -6,13 +6,27 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 //Schema
-const articleSchema = new Schema({
-  title: { type: String, required: true },
-  date: { type: String, required: true },
-  url: { type: String, required: true }
+const inventorySchema = new Schema({
+  instrumentName: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: String,
+    required: true
+  },
+  type: {
+    type: String,
+    required: true
+  },
+  isAvailable: {
+    type: Boolean,
+    required: true,
+    default: true
+  }
 });
 
-const Article = mongoose.model("Article", articleSchema);
+const Inventory = mongoose.model("Inventory", inventorySchema);
 
 //Export
-module.exports = Article;
+module.exports = Inventory;
