@@ -11,9 +11,10 @@ const inventorySchema = new Schema({
     type: String,
     required: true
   },
-  date: {
+  dateAdded: {
     type: String,
-    required: true
+    required: true,
+    default: Date.now
   },
   type: {
     type: String,
