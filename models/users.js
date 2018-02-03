@@ -1,5 +1,4 @@
 //User Accounts Schema
-//...
 
 //Dependencies
 const mongoose = require("mongoose");
@@ -63,7 +62,7 @@ const usersSchema = new Schema({
   }
 });
 
-const Users = mongoose.model("User", usersSchema);
+const Users = mongoose.model("Users", usersSchema);
 
 //Export
 module.exports = Users;

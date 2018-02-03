@@ -1,5 +1,5 @@
-//Require the Users Schema
-const db = require("../models/users.js");
+//Require the Schemas in models directory
+const db = require("../models");
 
 // Defining methods for the usersController (exported to routes)
 //...

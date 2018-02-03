@@ -1,4 +1,6 @@
-const Users = require("../models/users");
+const db = require("../models");
+const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
 
 //Sample data here...
 const testCrowd = [
@@ -34,7 +36,7 @@ const testCrowd = [
 const limit = 1;
 
 function getNewData() {
-    Users.find({}).limit(limit).exec(function(err, collection) {
+    db.Users.find({}).limit(limit).exec(function(err, collection) {
         if (collection.length === 0) {
             // iterate over the set of agents for initialization and create entries
             testCrowd.map(function(user) {
