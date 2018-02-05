@@ -40,7 +40,7 @@ function getNewData() {
         if (collection.length === 0) {
             // iterate over the set of agents for initialization and create entries
             testCrowd.map(function(user) {
-                let newUser = new Users(user)
+                let newUser = new db.Users(user)
                 newUser.save(function(err, data) {
                     if (err) {
                         console.log(err);
