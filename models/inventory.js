@@ -12,11 +12,18 @@ const inventorySchema = new Schema({
     required: true
   },
   dateAdded: {
-    type: String,
-    required: true,
+    type: Date,
     default: Date.now
   },
   type: {
+    type: String,
+    required: true
+  },
+  brand: {
+    type: String,
+    required: true
+  },
+  image: {
     type: String,
     required: true
   },
