@@ -1,7 +1,7 @@
 //Require the Schemas in models directory
 const db = require("../models");
 
-// Defining methods for the usersController (exported to routes)
+// Defining methods for the inventoryController (exported to routes)
 module.exports = {
   findAll: function(req, res) {
     db.Inventory

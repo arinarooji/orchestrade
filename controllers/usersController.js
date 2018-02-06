@@ -18,6 +18,7 @@ module.exports = {
   },
   create: function(req, res) {
     db.Users
+      //Hash password first
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
