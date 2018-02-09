@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import IndexPage from './pages/IndexPage'
 import LoginPage from './pages/LoginPage'
+import HomePage  from './pages/HomePage'
 
 class App extends Component {
   render() {
