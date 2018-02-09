@@ -12,7 +12,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
-export default class Navi extends Component {
+export default class NavBar extends Component {
   constructor(props) {
     super(props);
 

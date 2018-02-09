@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from '../../components/NavBar/index';
 
-class HomePage extends Component {
+class BrowsePage extends Component {
     render() {
       return (
         <div>
@@ -11,4 +11,4 @@ class HomePage extends Component {
     }
 }
   
-export default HomePage;
+export default BrowsePage;

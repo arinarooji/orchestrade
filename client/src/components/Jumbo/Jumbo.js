@@ -4,7 +4,7 @@ import { Jumbotron, Button } from 'reactstrap';
 const Jumbo = (props) => {
   return (
     <div>
-      <Jumbotron className="bg-dark text-white jumbotron-fluid">
+      <Jumbotron className="bg-dark text-white jumbotron-fluid mb-0">
         <div className="text-center">
           <h1 className="display-4">Orchestrade</h1>
           <p className="lead">A short slogan or motto here.</p>
