@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'reactstrap';
 export default class About extends React.Component {
   render() {
     return (
-      <Container className="container-fluid py-2 bg-light">         
+      <Container className="container-fluid py-3 bg-light">         
         <Row>
           <Col>
             <h2 className="section-heading text-center pb-2 display-4" >Our Purpose</h2>
