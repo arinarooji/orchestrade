@@ -28,7 +28,7 @@ return (
             </Col>
             <Col lg="2" className="mt-2">
                 <br />
-                <Button>Login</Button>
+                <Button>Log In</Button>
             </Col>
         </Row>
     </Container>
