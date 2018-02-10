@@ -40,15 +40,26 @@ import React, {Component} from 'react';
                <NavItem>
                  <NavLink href="/browse">Browse</NavLink>
                </NavItem>
-               <NavItem>
-                 <NavLink href="/add">Add</NavLink>
-               </NavItem>
-               <NavItem>
-                 <NavLink href="/manage">Manage</NavLink>
-               </NavItem>
-               <NavItem>
-                 <NavLink href="/">About</NavLink>
-               </NavItem>
+               <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Account
+                </DropdownToggle>
+                <DropdownMenu >
+                  <DropdownItem>
+                    <NavLink href="/add">Add Instruments</NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavLink href="/manage">Manage Instruments</NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    <NavLink href="/settings">Settings</NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavLink href="/#">Log Out</NavLink>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
              </Nav>
            </Collapse>
          </Navbar>
