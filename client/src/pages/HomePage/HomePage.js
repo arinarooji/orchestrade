@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from '../../components/Navbar';
+import NavBar from '../../components/NavBar';
 import NewParticles from '../../components/Particles/Particles';
 import About from '../../components/About';
 import './HomePage.css'
@@ -8,7 +8,7 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
+        <NavBar/>
         <div className="container text-center">
           <section>
             <NewParticles/>
