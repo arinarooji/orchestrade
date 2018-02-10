@@ -27,12 +27,12 @@ export default class NavBar extends Component {
     return (
       <div>
         <Navbar color="faded" light expand="md" className="fixed-top bg-white">
-          <NavbarBrand href="#">Orchestrade</NavbarBrand>
+          <NavbarBrand href="/">Orchestrade</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">Browse</NavLink>
+                <NavLink href="/browse">Browse</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="#">Add</NavLink>

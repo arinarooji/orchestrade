@@ -11,7 +11,7 @@ const Jumbo = (props) => {
           <hr className="my-2" />
           <p>Here is an optional paragraph element. This could be used to explain where the button below will take the user?</p>
           <p className="lead">
-            <Button color="primary">Get Started</Button>
+            <a href="/login" type="button" className="btn btn-primary">Get Started</a>
           </p>
         </div>
       </Jumbotron>

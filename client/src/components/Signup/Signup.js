@@ -37,7 +37,7 @@ return (
                         <Input type="password" name="password" id="password" placeholder="Minimum of 6 characters" />
                     </FormGroup>
                     <FormGroup className="text-center">
-                        <Button type="submit">Sign Up!</Button>
+                        <a href="/browse" type="submit" className="btn btn-secondary">Sign Up</a>
                     </FormGroup>
                 </Form>
             </Col>

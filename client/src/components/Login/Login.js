@@ -28,7 +28,7 @@ return (
             </Col>
             <Col lg="2" className="mt-2">
                 <br />
-                <Button>Log In</Button>
+                <a href="/browse" type="button" className="btn btn-secondary">Log In</a>
             </Col>
         </Row>
     </Container>
