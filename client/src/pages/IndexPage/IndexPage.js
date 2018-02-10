@@ -17,7 +17,7 @@ class IndexPage extends Component {
         <Testimony/>
         <Footer/>
       </div>
-      );
+    );
   }
 }
 
