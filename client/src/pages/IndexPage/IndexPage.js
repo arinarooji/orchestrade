@@ -6,17 +6,17 @@ import Testimony from '../../components/Testimony';
 import Footer from '../../components/Footer';
 
 class IndexPage extends Component {
-    render() {
-      return (
-        <div>
-          <Jumbo/>
-          <Carousel />
-          <About/>
-          <Testimony/>
-          <Footer/>
-        </div>
+  render() {
+    return (
+      <div>
+        <Jumbo/>
+        <Carousel />
+        <About/>
+        <Testimony/>
+        <Footer/>
+      </div>
       );
-    }
+  }
 }
-  
+
 export default IndexPage;
