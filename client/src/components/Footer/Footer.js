@@ -6,7 +6,7 @@ const Footer = (props) => {
         <div className="text-center bg-dark text-white index-footer">
             <footer>
                 &copy; Orchestrade 2018
-                <br/>
+                &emsp;&emsp;
                 <a href="#">Login &#9675; Signup</a>
             </footer>
         </div>
