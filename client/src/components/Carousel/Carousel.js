@@ -9,6 +9,7 @@ import {
   Row,
   Col
 } from 'reactstrap';
+import "./Carousel.css";
 
 const items = [
   {
@@ -74,7 +75,7 @@ class newCarousel extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} />
+          <img src={item.src} alt={item.altText} className="img-fluid"/>
           <CarouselCaption captionHeader={item.caption} />
         </CarouselItem>
       );
@@ -82,7 +83,7 @@ class newCarousel extends Component {
 
     return (
     <div>
-    <Container className="container-fluid text-center">
+    <div className="text-center">
     <Row>
     <Col lg="12">
         <Carousel
@@ -97,7 +98,7 @@ class newCarousel extends Component {
         </Carousel>
     </Col>
     </Row>
-    </Container>
+    </div>
     </div>
     );
   }

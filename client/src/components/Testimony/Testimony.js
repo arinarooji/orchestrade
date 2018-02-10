@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'reactstrap';
 export default class Testimony extends React.Component {
     render() {
         return (
-            <Container className="container-fluid pb-4 bg-dark text-white">
+            <div className="pb-4 bg-dark text-white">
                 <Row>
                     <Col>
                         <h2 className="section-heading text-center pb-2 display-4">Testimony</h2>
@@ -27,7 +27,7 @@ export default class Testimony extends React.Component {
                     </i></center>
                     </Col>
                 </Row>
-            </Container>
+            </div>
         );
     }
 }

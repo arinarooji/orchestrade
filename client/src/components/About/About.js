@@ -5,32 +5,31 @@ import { Container, Row, Col } from 'reactstrap';
 export default class About extends React.Component {
   render() {
     return (
-      <Container className="container-fluid py-3 bg-light">         
+      <div className="py-3 bg-light">         
         <Row>
           <Col>
             <h2 className="section-heading text-center pb-2 display-4" >Our Purpose</h2>
           </Col>
         </Row>
         <Row>
-          <Col xs="12" lg={{size: "10", offset: "1"}} className="text-center">
+          <Col xs="12" lg={{size: "8", offset: "2"}} className="px-4">
             <center><i>
-              "Charlotte Mecklenburg school (CMS) system has 19 marching bands. The district offers no financialsupport to them because marching band is considered an extracurricular activity. This means studentsare on their own when it comes to financially supporting the program."- Derrick Russell, Reporter, WBTV Article
+              "Charlotte Mecklenburg school (CMS) system has 19 marching bands. 
+              The district offers no financial support to them because marching band is considered an extracurricular activity. 
+              This means students are on their own when it comes to financially supporting the program."- Derrick Russell, Reporter, WBTV Article
             </i></center>
               <br/>
-            <p>
-              Helping to fill the musical needs of students in Charlotte Mecklenburg school system byproviding access to unused musical instruments. Using our web app public schools will be ableto loan or trade instruments with other schools in the area. Schools interested in takingadvantage will sign up to list instruments they are willing to loan or trade, or search forinstruments their students need.
+            <p className="lead">
+              &emsp;&emsp;Orchestrade helps schools meet the musical needs of students by providing access to unused musical instruments. 
+              Using our web app, public schools will be able to loan or trade instruments with other schools in the area. 
+              Schools interested in utilizing our app will sign up to list instruments they are willing to loan or trade, and search for instruments that their students need.
             </p>
           </Col>
-          <Col xs="12" lg="12" align="center" className="">
+          <Col xs="12" lg={{size:"8", offset:"2"}}align="center" className="">
             <img src={require('../../image/schools.png')} className="img-fluid" alt="schools trading" /> 
           </Col>
         </Row>
-        <Row>
-          <Col>
-            <br/>
-          </Col>
-        </Row>
-      </Container>
+      </div>
     )
   }
 }
