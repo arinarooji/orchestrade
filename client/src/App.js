@@ -6,6 +6,8 @@ import IndexPage from './pages/IndexPage'
 import LoginPage from './pages/LoginPage'
 import HomePage from './pages/HomePage'
 import BrowsePage from './pages/BrowsePage'
+import ManagePage from './pages/ManagePage'
+
 
 class App extends Component {
   render() {
@@ -19,7 +21,7 @@ class App extends Component {
               <Route exact path="/home" component={HomePage} />
               <Route exact path="/browse" component={BrowsePage} />
               {/* Add page */}
-              {/* Manage page */}
+              <Route exact path="/manage" component={ManagePage} />
               <Route component={IndexPage} />
             </Switch>
           </div>
