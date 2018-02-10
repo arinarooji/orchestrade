@@ -1,12 +1,5 @@
-import React, {Component} from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
+import React, { Component } from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink,
 } from 'reactstrap';
 
 export default class NavBar extends Component {
@@ -26,24 +19,28 @@ export default class NavBar extends Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light expand="md" className="fixed-top bg-white">
-          <NavbarBrand href="/">Orchestrade</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/browse">Browse</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Add</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Manage</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
+        <Navbar color="faded" light expand="md">
+          { /* begin container */ }
+          <div className="container">
+            <NavbarBrand href="#">Orchestrade</NavbarBrand>
+            <NavbarToggler onClick={ this.toggle } />
+            <Collapse isOpen={ this.state.isOpen } navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <NavLink href="#">Browse</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="#">Add</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="#">Manage</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </div>
+          { /* end container */ }
         </Navbar>
       </div>
-    );
+      );
   }
 }

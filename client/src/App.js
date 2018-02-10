@@ -4,8 +4,8 @@ import logo from './logo.svg';
 import './App.css';
 import IndexPage from './pages/IndexPage'
 import LoginPage from './pages/LoginPage'
-import HomePage  from './pages/HomePage'
-import BrowsePage  from './pages/BrowsePage'
+import HomePage from './pages/HomePage'
+import BrowsePage from './pages/BrowsePage'
 
 class App extends Component {
   render() {
@@ -16,13 +16,14 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={IndexPage} />
               <Route exact path="/login" component={LoginPage} />
+              <Route exact path="/home" component={HomePage} />
               <Route exact path="/browse" component={BrowsePage} />
               <Route component={IndexPage} />
             </Switch>
           </div>
         </Router>
       </div>
-    );
+      );
   }
 }
 

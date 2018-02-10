@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+#root {
+  background: #f4f4f4; }
+
+.attention {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70vh;
+  width: 100%;
+  color: #fff; }
+
+.jumbotron {
+  background-color: #000 !important; }
+
+.lead {
+  font-family: 'Titillium Web', sans-serif; }
+
+canvas {
+  background-color: #000;
+  border-radius: .5%; }
+
+.orgName {
+  position: absolute;
+  color: #c0b283;
+  top: 15%;
+  left: 40%; }
+  .orgName h1 {
+    font-size: 50px; }
+  .orgName .lead {
+    font-size: 23px; }
+
+.quote {
+  background-image: url("http://allswalls.com/images/violin-wallpaper-5.jpg");
+  background-position: center;
+  color: #fff;
+  height: 20vh; }
+
+/*# sourceMappingURL=HomePage.css.map */
