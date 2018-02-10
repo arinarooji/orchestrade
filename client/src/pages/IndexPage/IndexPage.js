@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavBar from '../../components/NavBar';
+import Navi from '../../components/Navi';
 import Jumbo from '../../components/Jumbo';
 import Carousel from '../../components/Carousel';
 import About from '../../components/About';
@@ -10,7 +10,7 @@ class IndexPage extends Component {
   render() {
     return (
       <div>
-        <NavBar/>
+        <Navi/>
         <Jumbo/>
         <Carousel />
         <About/>

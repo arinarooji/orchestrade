@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavBar from '../../components/NavBar';
+import Navi from '../../components/Navi';
 import Search from '../../components/Search';
 import InstrumentCard from '../../components/InstrumentCard';
 import Footer from '../../components/Footer';
@@ -8,7 +8,7 @@ class BrowsePage extends Component {
     render() {
       return (
         <div>
-            <NavBar/>
+            <Navi/>
             <Search/>
             {/* div containing the list of instruments received from DB */}
             <div className="col-12 px-0 mx-0">

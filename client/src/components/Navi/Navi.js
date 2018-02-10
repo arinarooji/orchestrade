@@ -12,7 +12,7 @@ import React, {Component} from 'react';
    DropdownMenu,
    DropdownItem } from 'reactstrap';
  
- export default class NavBar extends Component {
+ export default class Navi extends Component {
    constructor(props) {
      super(props);
  
@@ -30,33 +30,25 @@ import React, {Component} from 'react';
      return (
        <div>
          <Navbar color="faded" light expand="md">
-           <NavbarBrand href="/">reactstrap</NavbarBrand>
+           <NavbarBrand href="/home">Orchestrade</NavbarBrand>
            <NavbarToggler onClick={this.toggle} />
            <Collapse isOpen={this.state.isOpen} navbar>
              <Nav className="ml-auto" navbar>
                <NavItem>
-                 <NavLink href="/components/">Components</NavLink>
+                 <NavLink href="/home">Home</NavLink>
                </NavItem>
                <NavItem>
-                 <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                 <NavLink href="/browse">Browse</NavLink>
                </NavItem>
-               <UncontrolledDropdown nav inNavbar>
-                 <DropdownToggle nav caret>
-                   Options
-                 </DropdownToggle>
-                 <DropdownMenu >
-                   <DropdownItem>
-                     Option 1
-                   </DropdownItem>
-                   <DropdownItem>
-                     Option 2
-                   </DropdownItem>
-                   <DropdownItem divider />
-                   <DropdownItem>
-                     Reset
-                   </DropdownItem>
-                 </DropdownMenu>
-               </UncontrolledDropdown>
+               <NavItem>
+                 <NavLink href="/add">Add</NavLink>
+               </NavItem>
+               <NavItem>
+                 <NavLink href="/manage">Manage</NavLink>
+               </NavItem>
+               <NavItem>
+                 <NavLink href="/">About</NavLink>
+               </NavItem>
              </Nav>
            </Collapse>
          </Navbar>
