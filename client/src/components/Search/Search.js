@@ -18,7 +18,6 @@ const Search = (props) => {
             <h1 className="display-4">Browse</h1>
             <p className="lead">Find the instrument you need.</p>
             <hr className="my-2" />
-            <p>Use the category buttons below, or perform an advanced search by instrument name.</p>
             <p className="lead">
                 <ButtonGroup size="">
                     <Button>Brass</Button>
