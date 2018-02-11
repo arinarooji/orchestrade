@@ -11,6 +11,10 @@ const inventorySchema = new Schema({
     type: String,
     required: true
   },
+  school: {
+    type: String,
+    required: true
+  },
   dateAdded: {
     type: Date,
     default: Date.now
