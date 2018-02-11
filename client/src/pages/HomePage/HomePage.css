@@ -2,37 +2,26 @@
 #root {
   background: #f4f4f4; }
 
-.attention {
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 70vh;
-  width: 100%;
-  color: #fff; }
-
 .jumbotron {
-  background-color: #000 !important; }
+  background-image: url("../../image/saxophoneMed.jpg");
+  height: 60vh;
+  color: #fff;
+  margin-bottom: -15px !important; }
 
-.lead {
-  font-family: 'Titillium Web', sans-serif; }
-
-canvas {
-  background-color: #000;
-  border-radius: .5%; }
+.Tilt {
+  transform-style: preserve-3d; }
 
 .orgName {
-  position: absolute;
-  color: #c0b283;
-  top: 15%;
-  left: 40%; }
+  color: #fff;
+  transform: translateZ(20px); }
   .orgName h1 {
     font-size: 50px; }
   .orgName .lead {
-    font-size: 23px; }
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px; }
 
-.quote {
-  background-image: url("http://allswalls.com/images/violin-wallpaper-5.jpg");
-  background-position: center;
-  color: #fff;
-  height: 20vh; }
+.part2 {
+  margin-top: 20px;
+  background-color: #0f0a07; }
 
 /*# sourceMappingURL=HomePage.css.map */

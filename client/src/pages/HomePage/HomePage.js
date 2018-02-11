@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navi from '../../components/Navi';
-import NewParticles from '../../components/Particles/Particles';
+import Tilt from 'react-tilt';
 import About from '../../components/About';
 import './HomePage.css'
 
@@ -9,20 +9,17 @@ class HomePage extends Component {
     return (
       <div>
         <Navi/>
-        <div className="container text-center">
-          <section>
-            <NewParticles/>
-              <div className ="orgName">
+        <Tilt className="Tilt" options={{ max : 25 }} >
+          <section className="text-center Tilt-inner jumbotron">
+            <div className ="orgName">
               <h1>Orchestrade</h1>
               <p className="lead">Musica Vivit In Aeternum</p>
             </div>
           </section>
+        </Tilt>
+        <section className="part2">
           <hr/>
-          <About/>
-        </div>
-        <div className="quote text-center">
-          <p>"Through business and strategic partnerships, we seek the growth and longevity of music programs in all school districts"</p>
-        </div>
+        </section>
       </div>
       );
   }
