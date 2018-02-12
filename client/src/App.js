@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
 import IndexPage from './pages/IndexPage'
 import LoginPage from './pages/LoginPage'
 import HomePage from './pages/HomePage'
 import BrowsePage from './pages/BrowsePage'
+import AddPage  from './pages/AddPage'
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
               <Route exact path="/login" component={LoginPage} />
               <Route exact path="/home" component={HomePage} />
               <Route exact path="/browse" component={BrowsePage} />
-              {/* Add page */}
+              <Route exact path="/add" component={AddPage} />
               {/* Manage page */}
               <Route component={IndexPage} />
             </Switch>
