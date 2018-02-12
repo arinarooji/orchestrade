@@ -1,16 +1,30 @@
-import React from 'react';
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+import React from "react";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button
+} from "reactstrap";
 
-const InstrumentCard = (props) => {
+const InstrumentCard = props => {
   return (
     <div>
       <Card>
-        <CardImg top width="100%" src="http://via.placeholder.com/350x250" alt="Card image cap" />
+        {/*  350x250 for images if possible*/}
+        <CardImg
+          class="img-fluid"
+          src={props.link}
+          alt={`Beautiful image of a ${props.brand} ${props.instrument}`}
+        />
         <CardBody>
-          <CardTitle>Instrument</CardTitle>
-          <CardSubtitle>School name</CardSubtitle>
-          <CardText>Some quick details about the instrument.</CardText>
+          <CardTitle>
+            {props.brand} {props.instrument}
+          </CardTitle>
+          <CardSubtitle>Hosted By: {props.school}</CardSubtitle>
+          <CardText>Some quick details about the {props.instrument}.</CardText>
           <Button>Request</Button>
         </CardBody>
       </Card>

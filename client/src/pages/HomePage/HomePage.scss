@@ -1,54 +1,40 @@
 // import
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
-$background-color: #000;
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+$deep-black: #0f0a07;
 $white-text: #fff;
-$siliver-color: #a8a8a8;
+$pearl-color: #d1c4cb;
 $paper-color: #f4f4f4;
 $gold-color: #c0b283;
 #root {
-    background: $paper-color;
-}
-
-.attention {
-    // background-image: url("../../image/trebleClef.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 70vh;
-    width: 100%;
-    color: $white-text;
+  background: $paper-color;
 }
 
 .jumbotron {
-    background-color: $background-color !important;
+  background-image: url("../../image/saxophoneMed.jpg");
+  // background-position: center;
+  height: 60vh;
+  color: $white-text;
+  margin-bottom: -15px !important;
 }
 
-.lead {
-    font-family: 'Titillium Web', sans-serif;
+.Tilt {
+  transform-style: preserve-3d;
 }
-
-canvas {
-    background-color: $background-color;
-    border-radius: .5%;
-}
-
 .orgName {
-    position: absolute;
-    color: $gold-color;
-    top: 15%;
-    left: 40%;
+  color: $white-text;
+  transform: translateZ(20px);
 
-    h1 {
-        font-size: 50px;
-    }
+  h1 {
+    font-size: 50px;
+  }
 
-    .lead {
-        font-size: 23px;
-    }
+  .lead {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 30px;
+  }
 }
 
-.quote {
-    background-image: url("http://allswalls.com/images/violin-wallpaper-5.jpg");
-    background-position: center;
-    color: $white-text;
-    height: 20vh;
+.part2 {
+  margin-top: 20px;
+  background-color: $deep-black;
 }
