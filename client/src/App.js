@@ -6,6 +6,7 @@ import IndexPage from './pages/IndexPage'
 import LoginPage from './pages/LoginPage'
 import HomePage from './pages/HomePage'
 import BrowsePage from './pages/BrowsePage'
+import RequestPage from './pages/RequestPage/RequestPage';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
               <Route exact path="/login" component={LoginPage} />
               <Route exact path="/home" component={HomePage} />
               <Route exact path="/browse" component={BrowsePage} />
+              <Route exact path="/request" compondent={RequestPage}/>
               {/* Add page */}
               {/* Manage page */}
               <Route component={IndexPage} />
