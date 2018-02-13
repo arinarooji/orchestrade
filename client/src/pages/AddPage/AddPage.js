@@ -1,5 +1,5 @@
 import React, { Component }   from 'react';
-import NavBar                 from '../../components/NavBar';
+import Navi                 from '../../components/Navi';
 import Search                 from '../../components/Search';
 import InstrumentCard         from '../../components/InstrumentCard';
 import Footer                 from '../../components/Footer';
@@ -45,7 +45,7 @@ class AddPage extends Component {
 
       return (
         <div>
-            <NavBar/>
+            <Navi/>
             <Search/>
             <Input 
                 className = 'search-instruments'
