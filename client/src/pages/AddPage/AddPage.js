@@ -1,93 +1,62 @@
-import React, { Component }   from 'react';
-import NavBar                 from '../../components/NavBar';
-import Search                 from '../../components/Search';
-import InstrumentCard         from '../../components/InstrumentCard';
-import Footer                 from '../../components/Footer';
-import PropTypes              from 'prop-types';
-import escapeRegExp           from 'escape-string-regexp';
-import sortBy                 from 'sort-by';
-import { Input }              from 'reactstrap';
+import React, { Component } from "react";
+import Navi from "../../components/Navi";
+import Add from "../../components/Add";
+import InstrumentCard from "../../components/InstrumentCard";
+import Footer from "../../components/Footer";
+import API from "../../utils/API";
 
+//We still need to work on the search input/tabs... Also the search tabs need to be made responsive 
 class AddPage extends Component {
+  // the state of the inventory will be stored here
+  state = {
+    inventory: []
+  };
 
-    static propTypes = {
-        testInstruments: PropTypes.array.isRequired,
-        onAddInstrument: PropTypes.func.isRequired
-    }
+  componentDidMount() {
+    this.getInventory();
+  }
 
-    state = {
-        query: ''
-    }
+  // reach for our inventory and update our state
+  getInventory = event => {
+    API.getInventory().then(results => {
+      this.setState({
+        inventory: results.data
+      });
+    });
+  };
 
-    updateQuery = (query) => {
-        this.setState({ query: query.trim() })
-    }
+  // looping through the inventory state and passing the inventory properties to each item defined
+  renderInventory = () => {
+    return (
+      <div className="inventorySect col-12 px-0 mx-0">
+        <ul className="list-inline list-unstyled px-0 mx-0">
+          {this.state.inventory.map(inv => (
+            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+              <InstrumentCard
+                key={inv._id}
+                uniqueId={inv._id}
+                link={inv.image}
+                brand={inv.brand}
+                instrument={inv.instrumentName}
+                school={inv.school}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
 
-    clearQuery = () => {
-        this.setState({ query: ''})
-    }
-
-    render() {
-      const { testInstruments, onAddInstrument } = this.props
-      const { query } = this.state 
-      
-      let showingInstruments
-
-      if (query) {
-          const match = new RegExp(escapeRegExp(query), 'i')
-          showingInstruments = testInstruments.filter((instrument) => match.test(instrument.instrumentName))
-      }
-      else {
-          showingInstruments = testInstruments
-      }
-
-      showingInstruments.sort(sortBy('instrumentName'))
-
-      return (
-        <div>
-            <NavBar/>
-            <Search/>
-            <Input 
-                className = 'search-instruments'
-                type = 'text'
-                placeholder="Cello"
-                value = {this.state.query}
-                onChange = { (event) => this.updateQuery(event.target.value)}
-            />
-
-            {showingInstruments.length !== testInstruments.length && (
-                <div className = 'showing-instruments'>
-                <span> Showing {showingInstruments.length } out of {testInstruments.length } in our directory</span>
-                <button onClick={this.clearQuery}> Show All </button>
-
-                </div>
-            )}
-
-            <ol className='instrument-list'>
-                <h4>Available Instruments to Add</h4>
-                {showingInstruments.map((instrument) => (
-                    <li key={instrument.isAvailable} className='instrument-list-item'>
-                    <div className='instrument-avatar' style={{
-                        backgroundImage: `url(${instrument.image})`
-                        }}
-                        />
-                    <div className='instrument-details'>
-                        <p>{instrument.instrumentName}</p>
-                        <p>{instrument.type}</p>
-                        <p>{instrument.brand}</p>
-                    </div>
-
-                    <button  onClick={()=>onAddInstrument(instrument)} className='instrument-add' >
-                        Add
-                    </button>
-
-                </li>
-                ))}
-            </ol>
-            <Footer/>
-        </div>
-      );
-    }
+  render() {
+    return (
+      <div>
+        <Navi />
+        <Add />
+        {this.renderInventory()}
+        <Footer />
+      </div>
+    );
+  }
 }
-  
+
 export default AddPage;
