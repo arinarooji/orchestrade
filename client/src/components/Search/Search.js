@@ -18,17 +18,17 @@ const Search = props => {
           <h1 className="display-4">Browse</h1>
           <p className="lead">Find the instrument you need.</p>
           <hr className="my-2" />
-          <p className="lead">
-            <ButtonGroup size="">
-              <Button>Brass</Button>
-              <Button>Keyboard</Button>
-              <Button>Percussion</Button>
-              <Button>String</Button>
-              <Button>Woodwind</Button>
+          {/* <p className="lead"> */}
+            <ButtonGroup className="btn-group-sm">
+              <Button data-value="brass">Brass</Button>
+              <Button data-value="keyboard">Keyboard</Button>
+              <Button data-value="percussion">Percussion</Button>
+              <Button data-value="string">String</Button>
+              <Button data-value="woodwind">Woodwind</Button>
             </ButtonGroup>
             <br />
             or
-          </p>
+          {/* </p> */}
           <Container>
             <Col xs="12" lg={{ size: "6", offset: "3" }}>
               <InputGroup>
