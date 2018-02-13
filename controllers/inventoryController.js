@@ -12,7 +12,7 @@ module.exports = {
   },
   findById: function(req, res) {
     db.Inventory
-      .findById(req.params.id)
+      .findById(req.query)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

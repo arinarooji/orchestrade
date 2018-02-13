@@ -32,12 +32,15 @@ export default class Navi extends Component {
       <div>
         <Navbar color="faded" light expand="md">
           <div className="container">
-            <NavbarBrand href="/home">Orchestrade</NavbarBrand>
+            <NavbarBrand href="/">Orchestrade</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/home">Home</NavLink>
+                  <NavLink href="/">Home</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/about">About</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/browse">Browse</NavLink>
