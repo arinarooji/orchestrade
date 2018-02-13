@@ -1,9 +1,19 @@
 import React from 'react';
-import { Button, Form, FormGroup, Label, Col, Input, FormText } from 'reactstrap';
+import { Button, Form, Row, FormGroup, Label, Col, Input, FormText } from 'reactstrap';
 
 export default class Request extends React.Component {
   render() {
     return (
+      <div Classname="py-3 bg-light">
+        <Row>
+          <Col>
+            <h2 Classname="section-heading text-center pb-2 display-4">
+              Request FormGroup
+            </h2>
+          </Col>
+        </Row>
+      </div>
+
         <Form>
             <FormGroup tag="fieldset" row>
           <legend className="col-form-label col-sm-2">Length you want to borrow Instrument</legend>
