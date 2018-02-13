@@ -15,7 +15,7 @@ class HomePage extends Component {
               <h1>Orchestrade</h1>
               <p className="lead">Musica Vivit In Aeternum</p>
               <div className="startBtn">
-                <a className="btn btn-primary" href="/about">
+                <a className="btn btn-primary" href="/login">
                   Get Started
                 </a>
               </div>

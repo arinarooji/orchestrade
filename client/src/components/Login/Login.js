@@ -1,33 +1,64 @@
+
 import React, { Component } from "react";
-import { Container, Row, Col, Button, Input, Label } from "reactstrap";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Form,
+  Label,
+  Input,
+  Button,
+  Small
+} from "reactstrap";
 
-const Login = () => {
-  return (
-    <div>
-      <Container fluid className="text-white bg-dark py-3">
-        <Row>
-          <Col xs="1" lg="1" />
-          <Col xs="12" lg="5">
-            <h1 className="display-5">Orchestrade</h1>
-          </Col>
-          <Col xs="5" lg="2">
-            <Label>Email</Label>
-            <Input placeholder="name@school.edu" />
-          </Col>
-          <Col xs="5" lg="2">
-            <Label>Password</Label>
-            <Input />
-          </Col>
-          <Col lg="2" className="mt-2">
-            <br />
-            <a href="/home" type="button" className="btn btn-secondary">
-              Log In
-            </a>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  );
-};
+export default class Login extends Component {
+  constructor(props) {
+    super(props);
 
-export default Login;
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  render() {
+    return (
+      <div>
+        <Navbar color="faded" light expand="md">
+          <div className="container">
+            <NavbarBrand href="/home">Orchestrade</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+              <Form className="form-inline mr-4">
+                <div className="form-group">
+                <Input className="form-control form-control-sm mr-sm-2" placeholder="Email" />
+                </div>
+                <div className="form-group">
+                <Input className="form-control form-control-sm mr-sm-2" placeholder="Password" />
+                </div>
+                <Button className="btn btn-sm btn-outline-secondary my-2 my-sm-0">Log in</Button>
+                <div className="ml-2">
+                <small className="form-text text-muted"><a href="">Forgot account?</a></small>
+                </div>
+              </Form>
+              </Nav>
+            </Collapse>
+          </div>
+        </Navbar>
+      </div>
+    );
+  }
+}

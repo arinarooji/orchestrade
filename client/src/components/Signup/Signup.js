@@ -12,8 +12,8 @@ import {
 
 const Signup = () => {
   return (
-    <div>
-      <Container fluid className="bg-light py-3">
+    <div className="bg-light">
+      <Container className="py-3">
         <Row>
           <Col xs="12" lg="6" className="py-3">
             <img
@@ -22,6 +22,7 @@ const Signup = () => {
             />
           </Col>
           <Col xs="12" lg="4" className="py-3">
+          <h1>Create an Account</h1>
             <Form>
               <FormGroup>
                 <Label for="school">School</Label>
@@ -60,9 +61,9 @@ const Signup = () => {
                 />
               </FormGroup>
               <FormGroup className="text-center">
-                <a href="/home" type="submit" className="btn btn-secondary">
-                  Sign Up
-                </a>
+              <Button className="btn btn-sm btn-outline-secondary my-2 my-sm-0" href="/home">               
+                Sign Up
+              </Button>
               </FormGroup>
             </Form>
           </Col>
