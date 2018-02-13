@@ -14,6 +14,7 @@ mongoose.connect(
 //Sample data here...
 const testInstruments = [
     {
+        schoolId: 1,
         instrumentName: "Trombone",
         school: "Garner Magnet High School",
         type: "Brass",
@@ -22,6 +23,7 @@ const testInstruments = [
         isAvailable: "true"
     },
     {
+        schoolId: 2,
         instrumentName: "Violin",
         school: "South View High School",
         type: "String",
@@ -30,6 +32,7 @@ const testInstruments = [
         isAvailable: "true"
     },
     {
+        schoolId: 3,
         instrumentName: "Saxophone",
         school: "Seventy-First High School",
         type: "Woodwind",

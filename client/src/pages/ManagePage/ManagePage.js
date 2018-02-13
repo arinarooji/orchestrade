@@ -8,17 +8,17 @@ import API from "../../utils/API";
 class ManagePage extends Component {
   // the state of the user's inventory will be stored here
   state = {
-    id: "5a78f97e8d003a24bc5bec28", //User's ID
+    schoolId: "1", //User's school ID
     userInventory: [] //User's Inventory
   };
 
   componentDidMount() {
-    this.getInventoryById(this.state.id);
+    this.getInventoryById(this.state.schoolId);
   }
 
   // reach for our inventory and update our state
-  getInventoryById = id => {
-    API.getInventoryById(id).then(results => {
+  getInventoryById = schoolId => {
+    API.getInventoryById(schoolId).then(results => {
       this.setState({
         userInventory: results.data
       });
