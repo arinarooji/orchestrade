@@ -6,5 +6,8 @@ router.route("/")
   .get(inventoryController.findAll)
   .get(inventoryController.findById)
 
+  router.route("/category/:search")
+  .get(inventoryController.findByCat)
+
 
 module.exports = router;

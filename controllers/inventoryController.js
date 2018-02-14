@@ -27,6 +27,13 @@ module.exports = {
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  findByCat: function(req, res) {
+    db.Inventory
+      .find({type: req.params.search})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.json(err));
+    // console.log(req.params.search)
   }
   //Delete
   //...

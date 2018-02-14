@@ -13,4 +13,7 @@ export default {
   getInventoryById: function(schoolId) {
     return axios.get("/api/inventory/" + schoolId);
   },
+  getByCat: function(search){
+    return axios.get("/api/inventory/category/" + search);
+  }
 };
