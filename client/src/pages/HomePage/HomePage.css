@@ -3,7 +3,8 @@
   background: #f4f4f4; }
 
 .jumbotron {
-  background-image: url("../../image/saxophoneMed.jpg");
+  background-image: url("../../image/saxophone.jpeg");
+  background-position: center;
   height: 60vh;
   color: #fff;
   margin-bottom: -15px !important; }

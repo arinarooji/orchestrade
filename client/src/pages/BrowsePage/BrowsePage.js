@@ -9,7 +9,8 @@ import API from "../../utils/API";
 class BrowsePage extends Component {
   // the state of the inventory will be stored here
   state = {
-    inventory: []
+    inventory: [],
+    buttonSearch: ""
   };
 
   componentDidMount() {
@@ -25,6 +26,21 @@ class BrowsePage extends Component {
     });
   };
 
+  // search event for buttons 
+  btnSearch = event => {
+    this.setState({ buttonSearch: event.currentTarget.dataset.value })
+    const searchItem = this.state.buttonSearch;
+    API.getInventoryById(searchItem)
+    .then(searchItem => console.log(searchItem))
+  }
+
+  shouldRender = () => {
+    if(this.state.buttonSearch === ""){
+      return this.renderInventory()
+    } else {
+      return <h2>Hey There</h2>
+    }
+  }
   // looping through the inventory state and passing the inventory properties to each item defined
   renderInventory = () => {
     return (
@@ -51,8 +67,9 @@ class BrowsePage extends Component {
     return (
       <div>
         <Navi />
-        <Search />
-        {this.renderInventory()}
+        <Search btnSearch={this.btnSearch}/>
+        {/* {this.renderInventory()} */}
+        {this.shouldRender()}
         <Footer />
       </div>
     );

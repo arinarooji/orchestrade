@@ -7,6 +7,10 @@ const Schema = mongoose.Schema;
 
 //Schema
 const inventorySchema = new Schema({
+  schoolId: {
+    type: String,
+    required: true
+  },
   instrumentName: {
     type: String,
     required: true
