@@ -4,7 +4,13 @@ const inventoryController = require("../../controllers/inventoryController.js");
 // Matches with "/api/inventory"
 router.route("/")
   .get(inventoryController.findAll)
-  .get(inventoryController.findById)
+
+// Matches with "/api/inventory/:id"
+router
+  .route("/:id")
+  .get(inventoryController.findBySchoolId)
+  //.put(inventoryController.update)
+  //.delete(inventoryController.remove);
 
 
 module.exports = router;
