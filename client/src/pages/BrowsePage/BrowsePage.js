@@ -45,6 +45,9 @@ class BrowsePage extends Component {
   renderInventory = () => {
     return (
       <div className="inventorySect col-12 px-0 mx-0">
+        <h1>
+          Available Instruments
+        </h1>
         <ul className="list-inline list-unstyled px-0 mx-0">
           {this.state.inventory.map(inv => (
             <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
