@@ -1,44 +1,42 @@
 import React from 'react';
-import { Button, Form, Row, FormGroup, Label, Col, Input, FormText } from 'reactstrap';
+import { Button, Form, Row, FormGroup, Label, Col, Container, Input, FormText } from 'reactstrap';
 
 export default class Request extends React.Component {
   render() {
     return (
-      <div Classname="py-3 bg-light">
+      <div classname="py-3 bg-light">
         <Row>
-          <Col>
-            <h2 Classname="section-heading text-center pb-2 display-4">
-              Request FormGroup
+          <Col align="center">
+            <h2 classname="section-heading text-center" >
+              Request Form
             </h2>
           </Col>
         </Row>
-      </div>
-
         <Form>
-            <FormGroup tag="fieldset" row>
-          <legend className="col-form-label col-sm-2">Length you want to borrow Instrument</legend>
-          <Col sm={10}>
-            <FormGroup check>
-              <Label check>
-                <Input type="radio" name="radio2" />{' '}
-                3 days
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="radio" name="radio2" />{' '}
-                1 week
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="radio" name="radio2" />{' '}
-                1 Semester
-              </Label>
-            </FormGroup>
-          </Col>
-        </FormGroup>
+          <FormGroup>
+            <Label for="length"><strong>Select the length you want to borrow Instrument</strong></Label> 
+            <Input type="select" name="select" id="exampleSelect">
+              <option>3 Days</option>
+              <option>1 Week</option>
+              <option>1 Semester</option>
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            <Label for="length"><strong>Select the type of instrument you are looking to borrow</strong></Label>
+            <Input type="select" name="select" id="exampleSelect">
+              <option>Keys</option>
+              <option>String</option>
+              <option>Wind</option>
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            <Label for="Instrument"><strong>Name any specific insturment you would like to borrow</strong></Label>
+            <Input type="text" id="instrument" placeholder="Instrument" />
+          </FormGroup>
+          <Button>Request</Button>
         </Form>
-    )
+      </div>
+      
+    );
   }
 }
