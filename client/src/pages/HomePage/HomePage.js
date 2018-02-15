@@ -3,6 +3,9 @@ import Navi from "../../components/Navi";
 import Tilt from "react-tilt";
 import About from "../../components/About";
 import "./HomePage.css";
+import Carousel from "../../components/Carousel/Carousel";
+import Testimony from "../../components/Testimony";
+import Footer from "../../components/Footer";
 
 class HomePage extends Component {
   render() {
@@ -25,6 +28,9 @@ class HomePage extends Component {
         <section className="part2">
           <hr />
         </section>
+        <About />
+        <Carousel />
+        <Testimony />
       </div>
     );
   }
