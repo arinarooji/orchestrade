@@ -13,38 +13,42 @@ class ManagePage extends Component {
   };
 
   componentDidMount() {
-    this.getInventoryById(this.state.schoolId);
+    this.getInventoryBySchoolId(this.state.schoolId);
   }
 
   // reach for our inventory and update our state
-  getInventoryById = schoolId => {
-    API.getInventoryById(schoolId).then(results => {
+  getInventoryBySchoolId = schoolId => {
+    API.getInventoryBySchoolId(this.state.schoolId).then(results => {
       this.setState({
         userInventory: results.data
+      }, function() {
+        console.log(this.state.userInventory)
       });
     });
   };
 
   // looping through the inventory state and passing the inventory properties to each item defined
   renderInventory = () => {
-    return (
-      <div className="inventorySect col-12 px-0 mx-0">
-        <ul className="list-inline list-unstyled px-0 mx-0">
-          {this.state.userInventory.map(inv => (
-            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
-              <InstrumentCard
-                key={inv._id}
-                uniqueId={inv._id}
-                link={inv.image}
-                brand={inv.brand}
-                instrument={inv.instrumentName}
-                school={inv.school}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
+    if(this.state.userInventory.length !== []) {
+      return (
+        <div className="inventorySect col-12 px-0 mx-0">
+          <ul className="list-inline list-unstyled px-0 mx-0">
+            {this.state.userInventory.map(inv => (
+              <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+                <InstrumentCard
+                  key={inv._id}
+                  uniqueId={inv._id}
+                  link={inv.image}
+                  brand={inv.brand}
+                  instrument={inv.instrumentName}
+                  school={inv.school}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
   };
 
   render() {

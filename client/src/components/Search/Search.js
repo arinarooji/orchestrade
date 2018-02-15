@@ -20,11 +20,11 @@ const Search = props => {
           <hr className="my-2" />
           {/* <p className="lead"> */}
             <ButtonGroup className="btn-group-sm">
-              <Button data-value="brass" onClick={props.btnSearch} >Brass</Button>
-              <Button data-value="keyboard" onClick={props.btnSearch} >Keyboard</Button>
-              <Button data-value="percussion" onClick={props.btnSearch} >Percussion</Button>
-              <Button data-value="string" onClick={props.btnSearch}>String</Button>
-              <Button data-value="woodwind" onClick={props.btnSearch} >Woodwind</Button>
+              <Button data-value="Brass" onClick={props.btnSearch} >Brass</Button>
+              <Button data-value="Keyboard" onClick={props.btnSearch} >Keyboard</Button>
+              <Button data-value="Percussion" onClick={props.btnSearch} >Percussion</Button>
+              <Button data-value="String" onClick={props.btnSearch}>String</Button>
+              <Button data-value="Woodwind" onClick={props.btnSearch} >Woodwind</Button>
             </ButtonGroup>
             <br />
             or

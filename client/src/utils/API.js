@@ -10,7 +10,10 @@ export default {
     return axios.get("/api/inventory");
   },
   // Gets the instruments with the given id
-  getInventoryById: function(schoolId) {
+  getInventoryBySchoolId: function(schoolId) {
     return axios.get("/api/inventory/" + schoolId);
   },
+  getByCat: function(search){
+    return axios.get("/api/inventory/category/" + search);
+  }
 };
