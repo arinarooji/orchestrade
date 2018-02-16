@@ -15,5 +15,10 @@ export default {
   },
   getByCat: function(search){
     return axios.get("/api/inventory/category/" + search);
+  },
+
+  //Gets all instrument templates (AddPage)
+  getInstrumentTemplates: function() {
+    return axios.get("api/templates");
   }
 };

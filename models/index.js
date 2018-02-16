@@ -1,4 +1,5 @@
 module.exports = {
   Users: require("./users"),
-  Inventory: require("./inventory")
+  Inventory: require("./inventory"),
+  Templates: require("./templates")
 };
