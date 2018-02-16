@@ -9,16 +9,18 @@ import API from "../../utils/API";
 class AddPage extends Component {
   // the state of the inventory will be stored here
   state = {
-    inventory: []
+    buttonSearch: "",
+    inventory: [],
+    filteredInventory:[]
   };
 
   componentDidMount() {
-    this.getInventory();
+    this.getInstrumentTemplates();
   }
 
   // reach for our inventory and update our state
-  getInventory = event => {
-    API.getInventory().then(results => {
+  getInstrumentTemplates = event => {
+    API.getInstrumentTemplates().then(results => {
       this.setState({
         inventory: results.data
       });
@@ -26,33 +28,58 @@ class AddPage extends Component {
   };
 
   // looping through the inventory state and passing the inventory properties to each item defined
-  renderInventory = () => {
-    return (
-      <div className="inventorySect col-12 px-0 mx-0">
-        <ul className="list-inline list-unstyled px-0 mx-0">
-          {this.state.inventory.map(inv => (
-            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
-              <InstrumentCard
-                key={inv._id}
-                uniqueId={inv._id}
-                link={inv.image}
-                brand={inv.brand}
-                instrument={inv.instrumentName}
-                school={inv.school}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
+  renderInventory = (inventory) => {
+    if(inventory.length !== undefined) {
+      return (
+        <div className="inventorySect col-12 px-0 mx-0">
+          <ul className="list-inline list-unstyled px-0 mx-0">
+            {inventory.map(inv => (
+              <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+                <InstrumentCard
+                  key={inv._id}
+                  uniqueId={inv._id}
+                  link={inv.image}
+                  instrument={inv.instrumentName}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
   };
+
+  //Category click event that is passed an instrumentType from Manage.js (string value, ie "Brass")
+  handleClick = (instrumentType) => {
+
+    //Filter the inventory with the instrumentType string
+    let filteredInventory = this.state.inventory.filter(item => item.type == instrumentType);
+
+    //Set the button search state to equal instrument type
+    this.setState({ 
+      buttonSearch: instrumentType, //buttonSearch state now equals selected instrument type (string value in instrumentType, ie "Brass")
+      filteredInventory: filteredInventory //filteredInventory now equals the filteredInventory array created above
+    });
+  }
+
+  //This function renders either the entire user inventory, or the filtered inventory
+  shouldRender = () => {
+    //If the buttonSearch state is blank, render entire inventory
+    if (this.state.buttonSearch == "") {
+      return this.renderInventory(this.state.inventory)
+    }
+    //Else, render the filteredInventory stored in the state
+    else {
+      return this.renderInventory(this.state.filteredInventory);
+    }
+  }
 
   render() {
     return (
       <div>
         <Navi />
-        <Add />
-        {this.renderInventory()}
+        <Add handleClick={this.handleClick} />
+        {this.shouldRender()}
         <Footer />
       </div>
     );

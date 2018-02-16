@@ -10,7 +10,19 @@ export default {
     return axios.get("/api/inventory");
   },
   // Gets the instruments with the given id
-  getInventoryById: function(schoolId) {
+  getInventoryBySchoolId: function(schoolId) {
     return axios.get("/api/inventory/" + schoolId);
   },
+  //
+  getByCat: function(search){
+    return axios.get("/api/inventory/category/" + search);
+  },
+  //
+  getByInst: function(instrument){
+    return axios.get("api/inventory/instruments/" + instrument);
+  },
+  //Gets all instrument templates (AddPage)
+  getInstrumentTemplates: function() {
+    return axios.get("api/templates");
+  }
 };

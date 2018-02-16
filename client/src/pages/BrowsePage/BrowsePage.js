@@ -6,16 +6,20 @@ import Footer from "../../components/Footer";
 import "./BrowsePage.css"
 import API from "../../utils/API";
 
-//We still need to work on the search input/tabs... Also the search tabs need to be made responsive 
+//We still need to work on the search input/tabs... Also the search tabs need to be made responsive
 class BrowsePage extends Component {
   // the state of the inventory will be stored here
   state = {
     inventory: [],
-    buttonSearch: ""
+    buttonSearch: "",
+    buttonInventory: [],
+    inputSearch: "",
+    inputInventory: []
   };
 
   componentDidMount() {
     this.getInventory();
+    // this.shouldRender();
   }
 
   // reach for our inventory and update our state
@@ -27,21 +31,44 @@ class BrowsePage extends Component {
     });
   };
 
-  // search event for buttons 
+  // search event for buttons
   btnSearch = event => {
-    this.setState({ buttonSearch: event.currentTarget.dataset.value })
-    const searchItem = this.state.buttonSearch;
-    API.getInventoryById(searchItem)
-    .then(searchItem => console.log(searchItem))
-  }
+    this.setState(
+      { buttonSearch: event.currentTarget.dataset.value },
+      function() {
+        console.log(this.state.buttonSearch);
+        API.getByCat(this.state.buttonSearch).then(results =>
+          this.setState({
+            buttonInventory: results.data
+          })
+        );
+      }
+    );
+  };
 
   shouldRender = () => {
-    if(this.state.buttonSearch === ""){
+     if(this.state.buttonSearch === ""){
       return this.renderInventory()
     } else {
-      return <h2>Hey There</h2>
+      return this.renderCategory()
     }
-  }
+  };
+
+  // Handles updating component state when the user types into the input field
+  handleInputChange = event => {
+    this.setState({ inputSearch: event.target.value }, function(){
+      console.log(this.state.inputSearch)
+    });
+  };
+
+  // handles when the search button is clicked
+  handleInstSearch = (event) => {
+    const instToSearch = this.state.inputSearch;
+    API.getByInst(instToSearch)
+    .then((response) => this.setState({
+      inputInventory: response.data
+    }))
+  };
   // looping through the inventory state and passing the inventory properties to each item defined
   renderInventory = () => {
     return (
@@ -50,15 +77,60 @@ class BrowsePage extends Component {
           Available Instruments
         </h1>
         <ul className="list-inline list-unstyled px-0 mx-0">
-          {this.state.inventory.map(inv => (
+          {this.state.inventory.map(cat => (
             <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
               <InstrumentCard
-                key={inv._id}
-                uniqueId={inv._id}
-                link={inv.image}
-                brand={inv.brand}
-                instrument={inv.instrumentName}
-                school={inv.school}
+                key={cat._id}
+                uniqueId={cat._id}
+                type={cat.type}
+                link={cat.image}
+                brand={cat.brand}
+                instrument={cat.instrumentName}
+                school={cat.school}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
+  renderCategory = () => {
+    return (
+      <div className="inventorySect col-12 px-0 mx-0">
+        <ul className="list-inline list-unstyled px-0 mx-0">
+          {this.state.buttonInventory.map(cat => (
+            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+              <InstrumentCard
+                key={cat._id}
+                uniqueId={cat._id}
+                type={cat.type}
+                link={cat.image}
+                brand={cat.brand}
+                instrument={cat.instrumentName}
+                school={cat.school}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
+  renderInst = () => {
+    return (
+      <div className="inventorySect col-12 px-0 mx-0">
+        <ul className="list-inline list-unstyled px-0 mx-0">
+          {this.state.inputInventory.map(cat => (
+            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+              <InstrumentCard
+                key={cat._id}
+                uniqueId={cat._id}
+                type={cat.type}
+                link={cat.image}
+                brand={cat.brand}
+                instrument={cat.instrumentName}
+                school={cat.school}
               />
             </li>
           ))}
@@ -71,7 +143,12 @@ class BrowsePage extends Component {
     return (
       <div>
         <Navi />
-        <Search btnSearch={this.btnSearch}/>
+        <Search
+          btnClick={this.btnSearch}
+          yourValue={this.state.inputSearch}
+          handleChange={this.handleInputChange}
+          clickSearch={this.handleInstSearch}
+        />
         {/* {this.renderInventory()} */}
         {this.shouldRender()}
         <Footer />

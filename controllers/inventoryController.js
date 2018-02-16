@@ -16,6 +16,13 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  //Find by school ID (ManagePage)
+  findBySchoolId: function(req, res) {
+    db.Inventory
+      .find({schoolId: req.params.id})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     db.Inventory
       .create(req.body)
@@ -27,6 +34,18 @@ module.exports = {
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  findByCat: function(req, res) {
+    db.Inventory
+      .find({type: req.params.search})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.json(err));
+  },
+  findByInst: function(req, res){
+    db.Inventory
+    .find({instrumentName: new RegExp('^'+req.params.instrument+'$', "i")})
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.json(err));
   }
   //Delete
   //...

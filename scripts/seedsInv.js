@@ -23,7 +23,7 @@ const testInstruments = [
         isAvailable: "true"
     },
     {
-        schoolId: 2,
+        schoolId: 1,
         instrumentName: "Violin",
         school: "South View High School",
         type: "String",
