@@ -6,10 +6,12 @@ import Footer from "../../components/Footer";
 import API from "../../utils/API";
 
 class ManagePage extends Component {
-  // the state of the user's inventory will be stored here
+  
   state = {
     schoolId: "1", //User's school ID
-    userInventory: [] //User's Inventory
+    buttonSearch: "", //Type of instrument searched (this is used to filter the inventory)
+    userInventory: [], //User's Inventory
+    filteredInventory: [] //User's filtered inventory
   };
 
   componentDidMount() {
@@ -21,19 +23,17 @@ class ManagePage extends Component {
     API.getInventoryBySchoolId(this.state.schoolId).then(results => {
       this.setState({
         userInventory: results.data
-      }, function() {
-        console.log(this.state.userInventory)
       });
     });
   };
 
   // looping through the inventory state and passing the inventory properties to each item defined
-  renderInventory = () => {
-    if(this.state.userInventory.length !== []) {
+  renderInventory = (inventory) => {
+    if(inventory.length !== undefined) {
       return (
         <div className="inventorySect col-12 px-0 mx-0">
           <ul className="list-inline list-unstyled px-0 mx-0">
-            {this.state.userInventory.map(inv => (
+            {inventory.map(inv => (
               <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
                 <InstrumentCard
                   key={inv._id}
@@ -51,12 +51,37 @@ class ManagePage extends Component {
     }
   };
 
+  //Category click event
+  handleClick = (event) => {
+
+    //Filter the userInventory with the instrument type in event
+    let filteredInventory = this.state.userInventory.filter(item => item.type == event);
+
+    //Set the button search state to equal instrument type
+    this.setState({ 
+      buttonSearch: event, //Button search state now equals selected instrument type (string value in event, ie "Brass")
+      filteredInventory: filteredInventory //filteredInventory now equals all buttonSearch types
+    });
+  }
+
+  //This function renders either the entire user inventory, or the filtered inventory
+  shouldRender = () => {
+    //If the buttonSearch state is blank, render entire inventory (userInventory)
+    if (this.state.buttonSearch == "") {
+      return this.renderInventory(this.state.userInventory)
+    }
+    //Else, render the filteredInventory stored in the state
+    else {
+      return this.renderInventory(this.state.filteredInventory);
+    }
+  }
+
   render() {
     return (
       <div>
         <Navi />
-        <Manage />
-        {this.renderInventory()}
+        <Manage handleClick={this.handleClick}/>
+          {this.shouldRender()}
         <Footer />
       </div>
     );

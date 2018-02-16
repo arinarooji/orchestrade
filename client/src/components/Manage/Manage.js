@@ -20,11 +20,11 @@ const Manage = props => {
           <hr className="my-2" />
           <p className="lead">
             <ButtonGroup size="">
-              <Button>Brass</Button>
-              <Button>Keyboard</Button>
-              <Button>Percussion</Button>
-              <Button>String</Button>
-              <Button>Woodwind</Button>
+              <Button onClick={() => props.handleClick("Brass")}>Brass</Button>
+              <Button onClick={() => props.handleClick("Keyboard")}>Keyboard</Button>
+              <Button onClick={() => props.handleClick("Percussion")}>Percussion</Button>
+              <Button onClick={() => props.handleClick("String")}>String</Button>
+              <Button onClick={() => props.handleClick("Woodwind")}>Woodwind</Button>
             </ButtonGroup>
             <br />
           </p>
