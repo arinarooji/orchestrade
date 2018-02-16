@@ -20,11 +20,11 @@ const Search = props => {
           <hr className="my-2" />
           {/* <p className="lead"> */}
             <ButtonGroup className="btn-group-sm">
-              <Button data-value="Brass" onClick={props.btnSearch} >Brass</Button>
-              <Button data-value="Keyboard" onClick={props.btnSearch} >Keyboard</Button>
-              <Button data-value="Percussion" onClick={props.btnSearch} >Percussion</Button>
-              <Button data-value="String" onClick={props.btnSearch}>String</Button>
-              <Button data-value="Woodwind" onClick={props.btnSearch} >Woodwind</Button>
+              <Button data-value="Brass" onClick={props.btnClick} >Brass</Button>
+              <Button data-value="Keyboard" onClick={props.btnClick} >Keyboard</Button>
+              <Button data-value="Percussion" onClick={props.btnClick} >Percussion</Button>
+              <Button data-value="String" onClick={props.btnClick}>String</Button>
+              <Button data-value="Woodwind" onClick={props.btnClick} >Woodwind</Button>
             </ButtonGroup>
             <br />
             or
@@ -32,9 +32,9 @@ const Search = props => {
           <Container>
             <Col xs="12" lg={{ size: "6", offset: "3" }}>
               <InputGroup>
-                <Input placeholder="Cello" />
+                <Input placeholder="Cello" onChange={props.handleChange} />
                 <InputGroupAddon addonType="append">
-                  <Button color="secondary">Search!</Button>
+                  <Button color="secondary" value={props.yourValue} onClick={props.clickSearch} >Search!</Button>
                 </InputGroupAddon>
               </InputGroup>
             </Col>

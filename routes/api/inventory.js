@@ -12,8 +12,13 @@ router
   //.put(inventoryController.update)
   //.delete(inventoryController.remove);
 
-  router.route("/category/:search")
-  .get(inventoryController.findByCat)
+  router
+    .route("/category/:search")
+    .get(inventoryController.findByCat)
+
+  router
+    .route("/instruments/:instrument")
+    .get(inventoryController.findByInst)
 
 
 module.exports = router;

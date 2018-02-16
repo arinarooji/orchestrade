@@ -40,7 +40,12 @@ module.exports = {
       .find({type: req.params.search})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.json(err));
-    // console.log(req.params.search)
+  },
+  findByInst: function(req, res){
+    db.Inventory
+    .find({instrumentName: new RegExp('^'+req.params.instrument+'$', "i")})
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.json(err));
   }
   //Delete
   //...

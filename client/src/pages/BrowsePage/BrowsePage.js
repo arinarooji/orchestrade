@@ -11,11 +11,14 @@ class BrowsePage extends Component {
   state = {
     inventory: [],
     buttonSearch: "",
-    buttonInventory: []
+    buttonInventory: [],
+    inputSearch: "",
+    inputInventory: []
   };
 
   componentDidMount() {
     this.getInventory();
+    // this.shouldRender();
   }
 
   // reach for our inventory and update our state
@@ -43,11 +46,27 @@ class BrowsePage extends Component {
   };
 
   shouldRender = () => {
-    if (this.state.buttonSearch === "") {
-      return this.renderInventory();
+     if(this.state.buttonSearch === ""){
+      return this.renderInventory()
     } else {
-      return this.renderCategory();
+      return this.renderCategory()
     }
+  };
+
+  // Handles updating component state when the user types into the input field
+  handleInputChange = event => {
+    this.setState({ inputSearch: event.target.value }, function(){
+      console.log(this.state.inputSearch)
+    });
+  };
+
+  // handles when the search button is clicked
+  handleInstSearch = (event) => {
+    const instToSearch = this.state.inputSearch;
+    API.getByInst(instToSearch)
+    .then((response) => this.setState({
+      inputInventory: response.data
+    }))
   };
   // looping through the inventory state and passing the inventory properties to each item defined
   renderInventory = () => {
@@ -94,11 +113,38 @@ class BrowsePage extends Component {
     );
   };
 
+  renderInst = () => {
+    return (
+      <div className="inventorySect col-12 px-0 mx-0">
+        <ul className="list-inline list-unstyled px-0 mx-0">
+          {this.state.inputInventory.map(cat => (
+            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+              <InstrumentCard
+                key={cat._id}
+                uniqueId={cat._id}
+                type={cat.type}
+                link={cat.image}
+                brand={cat.brand}
+                instrument={cat.instrumentName}
+                school={cat.school}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
   render() {
     return (
       <div>
         <Navi />
-        <Search btnSearch={this.btnSearch} />
+        <Search
+          btnClick={this.btnSearch}
+          yourValue={this.state.inputSearch}
+          handleChange={this.handleInputChange}
+          clickSearch={this.handleInstSearch}
+        />
         {/* {this.renderInventory()} */}
         {this.shouldRender()}
         <Footer />
