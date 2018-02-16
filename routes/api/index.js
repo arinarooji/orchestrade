@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const userRoutes = require("./users");
 const inventoryRoutes = require("./inventory");
+const templateRoutes = require("./templates");
 
 //Child directories of "/api", apiRoutes
 
@@ -8,5 +9,7 @@ const inventoryRoutes = require("./inventory");
 router.use("/users", userRoutes);
 // Inventory route
 router.use("/inventory", inventoryRoutes);
+// Template route
+router.use("/templates", templateRoutes);
 
 module.exports = router;

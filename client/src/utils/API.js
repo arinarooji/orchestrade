@@ -13,7 +13,16 @@ export default {
   getInventoryBySchoolId: function(schoolId) {
     return axios.get("/api/inventory/" + schoolId);
   },
+  //
   getByCat: function(search){
     return axios.get("/api/inventory/category/" + search);
+  },
+  //
+  getByInst: function(instrument){
+    return axios.get("api/inventory/instruments/" + instrument);
+  },
+  //Gets all instrument templates (AddPage)
+  getInstrumentTemplates: function() {
+    return axios.get("api/templates");
   }
 };
