@@ -15,5 +15,8 @@ export default {
   },
   getByCat: function(search){
     return axios.get("/api/inventory/category/" + search);
+  },
+  getByInst: function(instrument){
+    return axios.get("api/inventory/instruments/" + instrument);
   }
 };
