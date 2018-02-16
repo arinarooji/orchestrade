@@ -15,10 +15,9 @@ class ManagePage extends Component {
   };
 
   componentDidMount() {
-    this.getInventoryBySchoolId(this.state.schoolId);
+    this.getInventoryBySchoolId(this.state.schoolId); //Retrieve all instruments with this ID
   }
 
-  // reach for our inventory and update our state
   getInventoryBySchoolId = schoolId => {
     API.getInventoryBySchoolId(this.state.schoolId).then(results => {
       this.setState({
@@ -51,16 +50,16 @@ class ManagePage extends Component {
     }
   };
 
-  //Category click event
-  handleClick = (event) => {
+  //Category click event that is passed an instrumentType from Manage.js (string value, ie "Brass")
+  handleClick = (instrumentType) => {
 
-    //Filter the userInventory with the instrument type in event
-    let filteredInventory = this.state.userInventory.filter(item => item.type == event);
+    //Filter the userInventory with the instrumentType string
+    let filteredInventory = this.state.userInventory.filter(item => item.type == instrumentType);
 
     //Set the button search state to equal instrument type
     this.setState({ 
-      buttonSearch: event, //Button search state now equals selected instrument type (string value in event, ie "Brass")
-      filteredInventory: filteredInventory //filteredInventory now equals all buttonSearch types
+      buttonSearch: instrumentType, //buttonSearch state now equals selected instrument type (string value in instrumentType, ie "Brass")
+      filteredInventory: filteredInventory //filteredInventory now equals the filteredInventory array created above
     });
   }
 
