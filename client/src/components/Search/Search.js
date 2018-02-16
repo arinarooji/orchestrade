@@ -34,7 +34,7 @@ const Search = props => {
               <InputGroup>
                 <Input placeholder="Cello" />
                 <InputGroupAddon addonType="append">
-                  <Button color="secondary">Search!</Button>
+                  <Button color="primary">Search!</Button>
                 </InputGroupAddon>
               </InputGroup>
             </Col>
