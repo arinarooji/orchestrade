@@ -1,5 +1,6 @@
 import React from "react";
 import { Jumbotron, Button } from "reactstrap";
+import "./Jumbo.css";
 
 const Jumbo = props => {
   return (
@@ -14,7 +15,7 @@ const Jumbo = props => {
             where the button below will take the user?
           </p>
           <p className="lead">
-            <a href="/login" type="button" className="btn btn-primary">
+            <a href="/login" className="btn btn-primary">
               Get Started
             </a>
           </p>
