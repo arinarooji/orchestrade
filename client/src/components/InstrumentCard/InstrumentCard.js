@@ -15,7 +15,7 @@ const InstrumentCard = props => {
       <Card>
         {/*  350x250 for images if possible*/}
         <CardImg
-          class="img-fluid"
+          className="img-fluid"
           src={props.link}
           alt={`Beautiful image of a ${props.brand} ${props.instrument}`}
         />
@@ -25,7 +25,7 @@ const InstrumentCard = props => {
           </CardTitle>
           <CardSubtitle>Hosted By: {props.school}</CardSubtitle>
           <CardText>Some quick details about the {props.instrument}.</CardText>
-          <Button>Request</Button>
+          <Button className="btn-block">{props.action}</Button>
         </CardBody>
       </Card>
     </div>
