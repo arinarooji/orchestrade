@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage'
 import BrowsePage from './pages/BrowsePage'
 import AddPage  from './pages/AddPage'
 import ManagePage from './pages/ManagePage'
+import SettingsPage from './pages/SettingsPage'
 
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
               <Route exact path="/about" component={IndexPage} />
               <Route exact path="/browse" component={BrowsePage} />
               <Route exact path="/add" component={AddPage} />
+              <Route exact path="/settings" component={SettingsPage} />
               <Route exact path="/manage" component={ManagePage} />
               <Route component={IndexPage} />
             </Switch>

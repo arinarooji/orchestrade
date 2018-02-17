@@ -6,7 +6,6 @@ import Footer from "../../components/Footer";
 import "./BrowsePage.css"
 import API from "../../utils/API";
 
-//We still need to work on the search input/tabs... Also the search tabs need to be made responsive
 class BrowsePage extends Component {
   // the state of the inventory will be stored here
   state = {
@@ -18,7 +17,6 @@ class BrowsePage extends Component {
 
   componentDidMount() {
     this.getInventory();
-    // this.shouldRender();
   }
 
   // reach for our inventory and update our state
@@ -53,29 +51,10 @@ class BrowsePage extends Component {
 
   // Handles updating component state when the user types into the input field
   handleInputChange = event => {
-    // this.setState({ inputSearch: event.target.value }, function(){
-    //   console.log(this.state.inputSearch)
-    // });
-    
     const searchInventory = this.filterResults(this.state.inventory, event.target.value, 'instrumentName');
     this.setState({ searchInventory });
     console.log(searchInventory)
   };
-
-  // handles when the search button is clicked
-  handleInstSearch = (event) => {
-    const instToSearch = this.state.inputSearch;
-    API.getByInst(instToSearch)
-    .then((response) => this.setState({
-      inputInventory: response.data
-    }))
-  };
-
-  //Request Instrument click event
-  handleRequestClick = (event) => {
-    console.log("Request this instrument");
-    //...
-  }
 
   // looping through the inventory state and passing the inventory properties to each item defined
   renderInventory = (theState) => {
