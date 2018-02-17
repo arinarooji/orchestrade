@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export default {
+  //GET ROUTES
   // Gets all users
   getUsers: function() {
     return axios.get("/api/users");
@@ -13,6 +14,10 @@ export default {
   getInventoryBySchoolId: function(schoolId) {
     return axios.get("/api/inventory/" + schoolId);
   },
+  // Gets the instruments with the given id
+  getItemById: function(id) {
+    return axios.get("/api/inventory/" + id);
+  },
   //Gets the instruments by their specific category ex "Brass"
   getByCat: function(search){
     return axios.get("/api/inventory/category/" + search);
@@ -24,5 +29,12 @@ export default {
   //Gets all instrument templates (AddPage)
   getInstrumentTemplates: function() {
     return axios.get("api/templates");
+  },
+
+  //POST ROUTES
+  //Create an instrument
+  createInstrument: function(instrumentData) {
+    return axios.post("api/inventory", instrumentData);
   }
+
 };

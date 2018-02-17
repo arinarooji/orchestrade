@@ -66,8 +66,31 @@ class AddPage extends Component {
 
   //Add Instrument click event
   handleAddClick = (event) => {
-    console.log("add instrument");
-    //...
+    event.preventDefault();
+
+    //The template's mongoId is stored on the uniqueid attribute on the AddPage
+    let mongoId = event.target.getAttribute('uniqueid');
+    
+    /*Save the instrument to the DB
+    API.createInstrument({
+      isAvailable: true,
+      schoolId: "1",
+      instrumentName: "Violin",
+      school: "Example school",
+      type: "String",
+      brand: "NA",
+      image: "http://media.guitarcenter.com/is/image/MMGS7/Prelude-Series-Violin-Outfit-1-8-Size/J05662000001000-00-500x500.jpg"
+    })*/
+
+    //The problem here is that the "/:id" route is told to find({studentId: req.params.id})
+    //We could find a way to abstract this route, passing in the search key AND value (ie {_id: id} as well as {schoolId: id} through params)
+    //Or find a different approach...working on this now
+    /*API.getItemById(mongoId)
+    .then(results => {
+      console.log(results);
+    });*/
+    console.log(mongoId);
+    console.log("We can find this id in the database, get the instrument template data, combine with additional data input from the user (eventually), and then post a new instrument to Inventory with appropriate data.");
   }
 
   //This function renders either the entire user inventory, or the filtered inventory
