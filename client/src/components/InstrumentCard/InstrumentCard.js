@@ -8,6 +8,7 @@ import {
   CardSubtitle,
   Button
 } from "reactstrap";
+import "./InstrumentCard.css"
 
 const InstrumentCard = props => {
   return (
