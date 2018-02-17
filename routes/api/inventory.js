@@ -9,16 +9,16 @@ router.route("/")
 router
   .route("/:id")
   .get(inventoryController.findBySchoolId)
-  //.put(inventoryController.update)
-  //.delete(inventoryController.remove);
+//.put(inventoryController.update)
+//.delete(inventoryController.remove);
 
-  router
-    .route("/category/:search")
-    .get(inventoryController.findByCat)
+router
+  .route("/category/:search")
+  .get(inventoryController.findByCat)
 
-  router
-    .route("/instruments/:instrument")
-    .get(inventoryController.findByInst)
+router
+  .route("/instruments/:instrument")
+  .get(inventoryController.findByInst)
 
 
 module.exports = router;
