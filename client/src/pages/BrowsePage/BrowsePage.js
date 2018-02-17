@@ -45,13 +45,16 @@ class BrowsePage extends Component {
     );
   };
 
-  shouldRender = () => {
-     if(this.state.buttonSearch === ""){
-      return this.renderInventory()
-    } else {
+// handle conditional rendering based on the state of each component
+ shouldRender = () => {
+    if (this.state.buttonInventory.length !== 0 && this.state.inputInventory.length === 0){
       return this.renderCategory()
+    }else if(this.state.inputInventory.length !== 0){
+      return this.renderInst()
+    }else {
+      return this.renderInventory()
     }
-  };
+  }
 
   // Handles updating component state when the user types into the input field
   handleInputChange = event => {
@@ -145,7 +148,6 @@ class BrowsePage extends Component {
           handleChange={this.handleInputChange}
           clickSearch={this.handleInstSearch}
         />
-        {/* {this.renderInventory()} */}
         {this.shouldRender()}
         <Footer />
       </div>

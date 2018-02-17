@@ -18,7 +18,6 @@ const Search = props => {
           <h1 className="display-4">Browse</h1>
           <p className="lead">Find the instrument you need.</p>
           <hr className="my-2" />
-          {/* <p className="lead"> */}
             <ButtonGroup className="btn-group-sm">
               <Button data-value="Brass" onClick={props.btnClick} >Brass</Button>
               <Button data-value="Keyboard" onClick={props.btnClick} >Keyboard</Button>
@@ -27,8 +26,7 @@ const Search = props => {
               <Button data-value="Woodwind" onClick={props.btnClick} >Woodwind</Button>
             </ButtonGroup>
             <br />
-            or
-          {/* </p> */}
+            <p>or</p>
           <Container>
             <Col xs="12" lg={{ size: "6", offset: "3" }}>
               <InputGroup>
