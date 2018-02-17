@@ -59,10 +59,18 @@ const usersSchema = new Schema({
     type: String,
     required: true,
     unique: true
-  }
+  },
+  inventory: [{
+    type:Schema.Types.ObjectId,
+    ref: "inventory",
+    required: true, 
+    default: 'No Instruments listed'
+  }]
+
 });
+
 
 const Users = mongoose.model("Users", usersSchema);
 
 //Export
-module.exports = Users;
+module.exports =Users;
