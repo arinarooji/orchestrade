@@ -3,6 +3,7 @@ import Navi from "../../components/Navi";
 import Search from "../../components/Search";
 import InstrumentCard from "../../components/InstrumentCard";
 import Footer from "../../components/Footer";
+import "./BrowsePage.css"
 import API from "../../utils/API";
 
 //We still need to work on the search input/tabs... Also the search tabs need to be made responsive
@@ -67,7 +68,7 @@ class BrowsePage extends Component {
     const stateRender = theState;
     return (
       <div className="inventorySect col-12 px-0 mx-0">
-        <h1>
+        <h1 class="available">
           Available Instruments
         </h1>
         <ul className="list-inline list-unstyled px-0 mx-0">
