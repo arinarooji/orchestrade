@@ -87,6 +87,7 @@ class BrowsePage extends Component {
                 brand={cat.brand}
                 instrument={cat.instrumentName}
                 school={cat.school}
+                action="Request Instrument"
               />
             </li>
           ))}
