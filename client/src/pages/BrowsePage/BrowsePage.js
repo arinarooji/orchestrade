@@ -71,6 +71,13 @@ class BrowsePage extends Component {
       inputInventory: response.data
     }))
   };
+
+  //Request Instrument click event
+  handleRequestClick = (event) => {
+    console.log("Request this instrument");
+    //...
+  }
+
   // looping through the inventory state and passing the inventory properties to each item defined
   renderInventory = (theState) => {
     const stateRender = theState;
@@ -87,7 +94,8 @@ class BrowsePage extends Component {
                 brand={cat.brand}
                 instrument={cat.instrumentName}
                 school={cat.school}
-                action="Request Instrument"
+                action="Request Instrument" //The innerHTML of the button
+                clickEvent = {this.handleRequestClick} //The button's page specific click event (requesting intruments)
               />
             </li>
           ))}
