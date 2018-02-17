@@ -40,7 +40,8 @@ class AddPage extends Component {
                   uniqueId={inv._id}
                   link={inv.image}
                   instrument={inv.instrumentName}
-                  action="Add Instrument"
+                  action="Add Instrument" //The innerHTML of the button
+                  clickEvent={this.handleAddClick} //The button's page specific click event (adding intruments)
                 />
               </li>
             ))}
@@ -61,6 +62,12 @@ class AddPage extends Component {
       buttonSearch: instrumentType, //buttonSearch state now equals selected instrument type (string value in instrumentType, ie "Brass")
       filteredInventory: filteredInventory //filteredInventory now equals the filteredInventory array created above
     });
+  }
+
+  //Add Instrument click event
+  handleAddClick = (event) => {
+    console.log("add instrument");
+    //...
   }
 
   //This function renders either the entire user inventory, or the filtered inventory

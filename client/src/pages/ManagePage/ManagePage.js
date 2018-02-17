@@ -41,7 +41,8 @@ class ManagePage extends Component {
                   brand={inv.brand}
                   instrument={inv.instrumentName}
                   school={inv.school}
-                  action="Remove Instrument"
+                  action="Remove Instrument" //The innerHTML of the button
+                  clickEvent={this.handleManageClick} //The button's page specific click event (deleting intruments)
                 />
               </li>
             ))}
@@ -62,6 +63,12 @@ class ManagePage extends Component {
       buttonSearch: instrumentType, //buttonSearch state now equals selected instrument type (string value in instrumentType, ie "Brass")
       filteredInventory: filteredInventory //filteredInventory now equals the filteredInventory array created above
     });
+  }
+
+  //Remove Instrument click event
+  handleManageClick = (event) => {
+    console.log("Delete this instrument");
+    //...
   }
 
   //This function renders either the entire user inventory, or the filtered inventory
