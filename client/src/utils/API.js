@@ -24,5 +24,8 @@ export default {
   //Gets all instrument templates (AddPage)
   getInstrumentTemplates: function() {
     return axios.get("api/templates");
+  },
+  auth: function() {
+    return axios.post("api/auth/signup");
   }
 };
