@@ -25,7 +25,7 @@ const InstrumentCard = props => {
           </CardTitle>
           <CardSubtitle>Hosted By: {props.school}</CardSubtitle>
           <CardText>Some quick details about the {props.instrument}.</CardText>
-          <Button>Request</Button>
+          <Button>{props.action}</Button>
         </CardBody>
       </Card>
     </div>
