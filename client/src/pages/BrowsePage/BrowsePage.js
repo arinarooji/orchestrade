@@ -48,11 +48,11 @@ class BrowsePage extends Component {
 // handle conditional rendering based on the state of each component
  shouldRender = () => {
     if (this.state.buttonInventory.length !== 0 && this.state.inputInventory.length === 0){
-      return this.renderCategory()
+      return this.renderInventory(this.state.buttonInventory)
     }else if(this.state.inputInventory.length !== 0){
-      return this.renderInst()
+      return this.renderInventory(this.state.inputInventory)
     }else {
-      return this.renderInventory()
+      return this.renderInventory(this.state.inventory)
     }
   }
 
@@ -72,14 +72,15 @@ class BrowsePage extends Component {
     }))
   };
   // looping through the inventory state and passing the inventory properties to each item defined
-  renderInventory = () => {
+  renderInventory = (theState) => {
+    const stateRender = theState;
     return (
       <div className="inventorySect col-12 px-0 mx-0">
         <ul className="list-inline list-unstyled px-0 mx-0">
-          {this.state.inventory.map(cat => (
-            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+          {stateRender.map(cat => (
+            <li key={cat._id} className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+            
               <InstrumentCard
-                key={cat._id}
                 uniqueId={cat._id}
                 type={cat.type}
                 link={cat.image}
@@ -94,49 +95,49 @@ class BrowsePage extends Component {
     );
   };
 
-  renderCategory = () => {
-    return (
-      <div className="inventorySect col-12 px-0 mx-0">
-        <ul className="list-inline list-unstyled px-0 mx-0">
-          {this.state.buttonInventory.map(cat => (
-            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
-              <InstrumentCard
-                key={cat._id}
-                uniqueId={cat._id}
-                type={cat.type}
-                link={cat.image}
-                brand={cat.brand}
-                instrument={cat.instrumentName}
-                school={cat.school}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  };
+  // renderCategory = () => {
+  //   return (
+  //     <div className="inventorySect col-12 px-0 mx-0">
+  //       <ul className="list-inline list-unstyled px-0 mx-0">
+  //         {this.state.buttonInventory.map(cat => (
+  //           <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+  //             <InstrumentCard
+  //               key={cat._id}
+  //               uniqueId={cat._id}
+  //               type={cat.type}
+  //               link={cat.image}
+  //               brand={cat.brand}
+  //               instrument={cat.instrumentName}
+  //               school={cat.school}
+  //             />
+  //           </li>
+  //         ))}
+  //       </ul>
+  //     </div>
+  //   );
+  // };
 
-  renderInst = () => {
-    return (
-      <div className="inventorySect col-12 px-0 mx-0">
-        <ul className="list-inline list-unstyled px-0 mx-0">
-          {this.state.inputInventory.map(cat => (
-            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
-              <InstrumentCard
-                key={cat._id}
-                uniqueId={cat._id}
-                type={cat.type}
-                link={cat.image}
-                brand={cat.brand}
-                instrument={cat.instrumentName}
-                school={cat.school}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  };
+  // renderInst = () => {
+  //   return (
+  //     <div className="inventorySect col-12 px-0 mx-0">
+  //       <ul className="list-inline list-unstyled px-0 mx-0">
+  //         {this.state.inputInventory.map(cat => (
+  //           <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+  //             <InstrumentCard
+  //               key={cat._id}
+  //               uniqueId={cat._id}
+  //               type={cat.type}
+  //               link={cat.image}
+  //               brand={cat.brand}
+  //               instrument={cat.instrumentName}
+  //               school={cat.school}
+  //             />
+  //           </li>
+  //         ))}
+  //       </ul>
+  //     </div>
+  //   );
+  // };
 
   render() {
     return (
