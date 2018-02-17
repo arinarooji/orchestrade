@@ -34,11 +34,7 @@ const Search = props => {
               <InputGroup>
                 <Input placeholder="Cello" onChange={props.handleChange} />
                 <InputGroupAddon addonType="append">
-<<<<<<< HEAD
-                  <Button color="primary">Search!</Button>
-=======
                   <Button color="secondary" value={props.yourValue} onClick={props.clickSearch} >Search!</Button>
->>>>>>> bf55631b933f5b4424ee60b72c47bab80ba044df
                 </InputGroupAddon>
               </InputGroup>
             </Col>
