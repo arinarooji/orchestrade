@@ -67,6 +67,9 @@ class BrowsePage extends Component {
     const stateRender = theState;
     return (
       <div className="inventorySect col-12 px-0 mx-0">
+        <h1>
+          Available Instruments
+        </h1>
         <ul className="list-inline list-unstyled px-0 mx-0">
           {stateRender.map(cat => (
             <li key={cat._id} className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
@@ -78,6 +81,7 @@ class BrowsePage extends Component {
                 brand={cat.brand}
                 instrument={cat.instrumentName}
                 school={cat.school}
+                action="Request Instrument"
               />
             </li>
           ))}

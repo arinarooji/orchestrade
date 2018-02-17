@@ -41,6 +41,7 @@ class ManagePage extends Component {
                   brand={inv.brand}
                   instrument={inv.instrumentName}
                   school={inv.school}
+                  action="Remove Instrument"
                 />
               </li>
             ))}

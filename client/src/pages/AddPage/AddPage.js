@@ -40,6 +40,7 @@ class AddPage extends Component {
                   uniqueId={inv._id}
                   link={inv.image}
                   instrument={inv.instrumentName}
+                  action="Add Instrument"
                 />
               </li>
             ))}

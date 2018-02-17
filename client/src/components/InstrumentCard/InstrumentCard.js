@@ -8,6 +8,7 @@ import {
   CardSubtitle,
   Button
 } from "reactstrap";
+import "./InstrumentCard.css"
 
 const InstrumentCard = props => {
   return (
@@ -25,7 +26,7 @@ const InstrumentCard = props => {
           </CardTitle>
           <CardSubtitle>Hosted By: {props.school}</CardSubtitle>
           <CardText>Some quick details about the {props.instrument}.</CardText>
-          <Button>Request</Button>
+          <Button className="btn-block">{props.action}</Button>
         </CardBody>
       </Card>
     </div>
