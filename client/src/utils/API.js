@@ -14,9 +14,9 @@ export default {
   getInventoryBySchoolId: function(schoolId) {
     return axios.get("/api/inventory/" + schoolId);
   },
-  // Gets the instruments with the given id
-  getItemById: function(id) {
-    return axios.get("/api/inventory/" + id);
+  // Gets the template with the given mongo id
+  getTemplateById: function(_id) {
+    return axios.get("/api/templates/" + _id);
   },
   //Gets the instruments by their specific category ex "Brass"
   getByCat: function(search){

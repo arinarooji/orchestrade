@@ -70,28 +70,28 @@ class AddPage extends Component {
 
     //The template's mongoId is stored on the uniqueid attribute on the AddPage
     let mongoId = event.target.getAttribute('uniqueid');
-    
-    /*Save the instrument to the DB
-    API.createInstrument({
-      isAvailable: true,
-      schoolId: "1",
-      instrumentName: "Violin",
-      school: "Example school",
-      type: "String",
-      brand: "NA",
-      image: "http://media.guitarcenter.com/is/image/MMGS7/Prelude-Series-Violin-Outfit-1-8-Size/J05662000001000-00-500x500.jpg"
-    })*/
 
-    //The problem here is that the "/:id" route is told to find({studentId: req.params.id})
-    //We could find a way to abstract this route, passing in the search key AND value (ie {_id: id} as well as {schoolId: id} through params)
-    //Or find a different approach...working on this now
-    /*API.getItemById(mongoId)
+    //Find the template clicked using the template's mongoId
+    API.getTemplateById(mongoId)
     .then(results => {
-      console.log(results);
-    });*/
-    console.log(mongoId);
-    console.log("We can find this id in the database, get the instrument template data, combine with additional data input from the user (eventually), and then post a new instrument to Inventory with appropriate data.");
-  }
+      
+      //New object containing template info and user info/input
+      let newInstrument = {
+        isAvailable: true,
+        schoolId: "1", //Obtained from user info
+        instrumentName: results.data.instrumentName,
+        school: "Obtained from user info",
+        type: results.data.type,
+        brand: "NA", //Obtained from user input (Modal, etc)
+        image: results.data.image
+      }
+
+      //Save the newly created instrument to the inventory collection
+      API.createInstrument(newInstrument)
+      .then(results => console.log(`${results.data.instrumentName} added to the inventory!`));
+    });
+
+  } //End of handleAddClick()
 
   //This function renders either the entire user inventory, or the filtered inventory
   shouldRender = () => {
