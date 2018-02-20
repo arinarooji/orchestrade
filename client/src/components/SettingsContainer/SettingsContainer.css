@@ -1,0 +1,17 @@
+#orchestradeNav {
+    height: 100%;
+    max-width: 250px;
+}
+
+hr {
+    height: 2px;
+    background-color: #fff;
+}
+
+.sideLink {
+    color: #fff !important;
+}
+.sideLink:hover {
+    color: #000 !important;
+    text-decoration: none !important;
+}
