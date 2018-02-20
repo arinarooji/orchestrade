@@ -22,11 +22,11 @@ const InstrumentCard = props => {
         />
         <CardBody>
           <CardTitle>
-            {props.brand} {props.instrument}
+            {props.instrument} ({props.brand})
           </CardTitle>
           <CardSubtitle>Hosted By: {props.school}</CardSubtitle>
           <CardText>Some quick details about the {props.instrument}.</CardText>
-          <Button className="btn-block" onClick={props.clickEvent}>{props.action}</Button>
+          <Button className="btn-block" onClick={props.clickEvent} uniqueId={props.uniqueId} type="submit">{props.action}</Button>
         </CardBody>
       </Card>
     </div>

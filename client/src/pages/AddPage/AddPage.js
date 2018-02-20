@@ -66,9 +66,32 @@ class AddPage extends Component {
 
   //Add Instrument click event
   handleAddClick = (event) => {
-    console.log("add instrument");
-    //...
-  }
+    event.preventDefault();
+
+    //The template's mongoId is stored on the uniqueid attribute on the AddPage
+    let mongoId = event.target.getAttribute('uniqueid');
+
+    //Find the template clicked using the template's mongoId
+    API.getTemplateById(mongoId)
+    .then(results => {
+      
+      //New object containing template info and user info/input
+      let newInstrument = {
+        isAvailable: true,
+        schoolId: "1", //Obtained from user info
+        instrumentName: results.data.instrumentName,
+        school: "Obtained from user info",
+        type: results.data.type,
+        brand: "NA", //Obtained from user input (Modal, etc)
+        image: results.data.image
+      }
+
+      //Save the newly created instrument to the inventory collection
+      API.createInstrument(newInstrument)
+      .then(results => console.log(`${results.data.instrumentName} added to the inventory!`));
+    });
+
+  } //End of handleAddClick()
 
   //This function renders either the entire user inventory, or the filtered inventory
   shouldRender = () => {
