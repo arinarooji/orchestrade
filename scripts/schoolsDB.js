@@ -54,148 +54,312 @@ const schoolsList = [
         number: "980-343-3627"
     },
     {
-        name: "",
-        number: ""
+        name: "Billingsville Elementary School",
+        number: "980-343-5520"
     },
     {
-        name: "",
-        number: ""
+        name: "Blythe Elementary School",
+        number: "980-343-5770"
     },
     {
-        name: "",
-        number: ""
+        name: "Briarwood Academy",
+        number: "980-343-6475"
     },
     {
-        name: "",
-        number: ""
+        name: "Bruns Academy",
+        number: "980-343-5495"
     },
     {
-        name: "",
-        number: ""
+        name: "Chantilly Montessori School",
+        number: "980-343-0692"
     },
     {
-        name: "",
-        number: ""
+        name: "Clear Creek Elementary School",
+        number: "980-343-6922"
     },
     {
-        name: "",
-        number: ""
+        name: "Collinswood Language Academy",
+        number: "980-343-5820"
     },
     {
-        name: "",
-        number: ""
+        name: "Cornelius Elementary School",
+        number: "980-343-3905"
     },
     {
-        name: "",
-        number: ""
+        name: "Cotswold Elementary School",
+        number: "980-343-6720"
     },
     {
-        name: "",
-        number: ""
+        name: "Croft Community School",
+        number: "980-343-0370"
     },
     {
-        name: "",
-        number: ""
+        name: "Crown Point Elementary School",
+        number: "980-343-6535"
     },
     {
-        name: "",
-        number: ""
+        name: "David Cox Road Elementary School",
+        number: "980-343-6540"
     },
     {
-        name: "",
-        number: ""
+        name: "Davidson Elementary School",
+        number: "980-343-3900"
     },
     {
-        name: "",
-        number: ""
+        name: "Devonshire Elementary School",
+        number: "980-343-6445"
     },
     {
-        name: "",
-        number: ""
+        name: "Dilworth Elementary School",
+        number: "980-343-2240"
     },
     {
-        name: "",
-        number: ""
+        name: "Dorothy J. Vaughan Academy of Technology",
+        number: "980-343-0030"
     },
     {
-        name: "",
-        number: ""
+        name: "Druid Hills Academy",
+        number: "980-343-5515"
     },
     {
-        name: "",
-        number: ""
+        name: "E. E. Waddell Language Academy",
+        number: "980-343-5815"
     },
     {
-        name: "",
-        number: ""
+        name: "Eastover Elementary School",
+        number: "980-343-5505"
     },
     {
-        name: "",
-        number: ""
+        name: "Elizabeth Lane Elementary School",
+        number: "980-343-5700"
     },
     {
-        name: "",
-        number: ""
+        name: "Elizabeth Traditional Elementary School",
+        number: "980-343-5475"
     },
     {
-        name: "",
-        number: ""
+        name: "Elon Park Elementary School",
+        number: "980-343-1440"
     },
     {
-        name: "",
-        number: ""
+        name: "Endhaven Elementary School",
+        number: "980-343-5436"
     },
     {
-        name: "",
-        number: ""
+        name: "First Ward Creative Arts Academy",
+        number: "980-343-5485"
     },
     {
-        name: "",
-        number: ""
+        name: "Grand Oak Elementary School",
+        number: "980-343-2063"
     },
     {
-        name: "",
-        number: ""
+        name: "Greenway Park Elementary School",
+        number: "980-343-5060"
     },
     {
-        name: "",
-        number: ""
+        name: "Hawk Ridge Elementary School",
+        number: "980-343-5927"
     },
     {
-        name: "",
-        number: ""
+        name: "Hickory Grove Elementary School",
+        number: "980-343-6464"
     },
     {
-        name: "",
-        number: ""
+        name: "Hidden Valley Elementary School",
+        number: "980-343-6810"
     },
     {
-        name: "",
-        number: ""
+        name: "Highland Creek Elementary School",
+        number: "980-343-1065"
     },
     {
-        name: "",
-        number: ""
+        name: "Highland Mill Montessori Elementary School",
+        number: "980-343-5525"
     },
     {
-        name: "",
-        number: ""
+        name: "Highland Renaissance Academy",
+        number: "980-343-5511"
     },
     {
-        name: "",
-        number: ""
+        name: "Hornets Nest Elementary School",
+        number: "980-343-6110"
     },
     {
-        name: "",
-        number: ""
+        name: "Huntersville Elementary School",
+        number: "980-343-3835"
     },
     {
-        name: "",
-        number: ""
+        name: "Huntingtowne Farms Elementary School",
+        number: "980-343-3625"
     },
     {
-        name: "",
-        number: ""
+        name: "Idlewild Elementary School",
+        number: "980-343-6411"
+    },
+    {
+        name: "Irwin Academic Center",
+        number: "980-343-5480"
+    },
+    {
+        name: "J.H. Gunn Elementary School",
+        number: "980-343-6477"
+    },
+    {
+        name: "J.V. Washam Elementary School",
+        number: "980-343-1071"
+    },
+    {
+        name: "John M. Morehead STEM Academy",
+        number: "980-343-5775"
+    },
+    {
+        name: "Joseph W. Grier Academy",
+        number: "980-343-5671"
+    },
+    {
+        name: "Lake Wylie Elementary School",
+        number: "980-343-3680"
+    },
+    {
+        name: "Lansdowne Elementary School",
+        number: "980-343-6733"
+    },
+    {
+        name: "Lawrence Orr Elementary School",
+        number: "980-343-9919"
+    },
+    {
+        name: "Lebanon Road Elementary School",
+        number: "980-343-3640"
+    },
+    {
+        name: "Long Creek Elementary School",
+        number: "980-343-6095"
+    },
+    {
+        name: "Mallard Creek Elementary School",
+        number: "980-343-3980"
+    },
+    {
+        name: "Marie G. Davis",
+        number: "980-343-0006"
+    },
+    {
+        name: "Matthews Elementary School",
+        number: "980-343-3940"
+    },
+    {
+        name: "McAlpine Elementary School",
+        number: "980-343-3750"
+    },
+    {
+        name: "McKee Road Elementary School",
+        number: "980-343-3970"
+    },
+    {
+        name: "Merry Oaks International Academy",
+        number: "980-343-6422"
+    },
+    {
+        name: "Montclaire Elementary",
+        number: "980-343-3635"
+    },
+    {
+        name: "Mountain Island Lake Academy",
+        number: "980-343-6948"
+    },
+    {
+        name: "Myers Park Traditional Elementary School",
+        number: "980-343-5522"
+    },
+    {
+        name: "Nathaniel Alexander Elementary School",
+        number: "980-343-5268"
+    },
+    {
+        name: "Nations Ford Elementary School",
+        number: "980-343-5838"
+    },
+    {
+        name: "Newell Elementary School",
+        number: "980-343-6820"
+    },
+    {
+        name: "Oakdale Elementary School",
+        number: "980-343-6076"
+    },
+    {
+        name: "Oakhurst STEAM Academy",
+        number: "980-343-6482"
+    },
+    {
+        name: "Oaklawn Language Academy",
+        number: "980-343-0400"
+    },
+    {
+        name: "Olde Providence Elementary School",
+        number: "980-343-3755"
+    },
+    {
+        name: "Palisades Park Elementary",
+        number: "980-343-9895"
+    },
+    {
+        name: "Park Road Montessori School",
+        number: "980-343-5830"
+    },
+    {
+        name: "Parkside Elementary School",
+        number: "980-343-9915"
+    },
+    {
+        name: "Paw Creek Elementary School",
+        number: "980-343-6088"
+    },
+    {
+        name: "Pineville Elementary School",
+        number: "980-343-3920"
+    },
+    {
+        name: "Pinewood Elementary School",
+        number: "980-343-5825"
+    },
+    {
+        name: "Piney Grove Elementary School",
+        number: "980-343-6470"
+    },
+    {
+        name: "Polo Ridge Elementary School",
+        number: "980-343-0749"
+    },
+    {
+        name: "Providence Spring Elementary School",
+        number: "980-343-6935"
+    },
+    {
+        name: "Rama Road Elementary School",
+        number: "980-343-6730"
+    },
+    {
+        name: "Reedy Creek Elementary School",
+        number: "980-343-6480"
+    },
+    {
+        name: "Reid Park Academy",
+        number: "980-343-5035"
+    },
+    {
+        name: "Renaissance West STEAM Academy",
+        number: "980-343-0049"
+    },
+    {
+        name: "River Gate Elementary School",
+        number: "980-344-1000"
+    },
+    {
+        name: "River Oaks Academy",
+        number: "980-344-1020"
     },
     {
         name: "",
