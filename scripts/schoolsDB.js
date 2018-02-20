@@ -362,8 +362,132 @@ const schoolsList = [
         number: "980-344-1020"
     },
     {
-        name: "",
-        number: ""
+        name: "Sedgefield Elementary School",
+        number: "980-343-5826"
+    },
+    {
+        name: "Selwyn Elementary School",
+        number: "980-343-5835"
+    },
+    {
+        name: "Shamrock Gardens Elementary School",
+        number: "980-343-6440"
+    },
+    {
+        name: "Sharon Elementary School",
+        number: "980-343-6725"
+    },
+    {
+        name: "Smithfield Elementary School",
+        number: "980-343-6550"
+    },
+    {
+        name: "Starmount Academy of Excellence",
+        number: "980-343-3630"
+    },
+    {
+        name: "Statesville Road Elementary School",
+        number: "980-343-6815"
+    },
+    {
+        name: "Steele Creek Elementary School",
+        number: "980-343-3810"
+    },
+    {
+        name: "Sterling Elementary School",
+        number: "980-343-3636"
+    },
+    {
+        name: "Stoney Creek Elementary School",
+        number: "980-344-1030"
+    },
+    {
+        name: "Thomasboro Academy",
+        number: "980-343-6000"
+    },
+    {
+        name: "Torrence Creek Elementary School",
+        number: "980-343-0695"
+    },
+    {
+        name: "Trillium Springs Montessori School",
+        number: "980-343-9442"
+    },
+    {
+        name: "Tuckaseegee Elementary School",
+        number: "980-343-6055"
+    },
+    {
+        name: "University Meadows Elementary School",
+        number: "980-343-3685"
+    },
+    {
+        name: "University Park Creative Arts School",
+        number: "980-343-5178"
+    },
+    {
+        name: "Walter G. Byers School",
+        number: "980-343-6940"
+    },
+    {
+        name: "Westerly Hills Academy",
+        number: "980-343-6021"
+    },
+    {
+        name: "Whitewater Academy",
+        number: "980-343-0003"
+    },
+    {
+        name: "Winding Springs Elementary School",
+        number: "980-343-5140"
+    },
+    {
+        name: "Windsor Park Elementary School",
+        number: "980-343-6405"
+    },
+    {
+        name: "Winget Park Elementary School",
+        number: "980-343-1063"
+    },
+    {
+        name: "Winterfield Elementary School",
+        number: "980-343-6400"
+    },
+    {
+        name: "Albemarle Road Middle School",
+        number: "980-343-6420"
+    },
+    {
+        name: "Alexander Graham Middle School",
+        number: "980-343-5810"
+    },
+    {
+        name: "Ashley Park Pre K-8 School",
+        number: "980-343-6018"
+    },
+    {
+        name: "Bailey Middle School",
+        number: "980-343-1068"
+    },
+    {
+        name: "Berryhill School",
+        number: "980-343-6100"
+    },
+    {
+        name: "Bruns Academy",
+        number: "980-343-5495"
+    },
+    {
+        name: "Carmel Middle School",
+        number: "980-343-6705"
+    },
+    {
+        name: "Cochrane Collegiate Academy",
+        number: "980-343-6460"
+    },
+    {
+        name: "Collinswood Language Academy",
+        number: "980-343-5820"
     },
     {
         name: "",
@@ -405,6 +529,38 @@ const schoolsList = [
         name: "",
         number: ""
     },
+    {
+        name: "",
+        number: ""
+    },
+    {
+        name: "",
+        number: ""
+    },
+    {
+        name: "",
+        number: ""
+    },
+    {
+        name: "",
+        number: ""
+    },
+    {
+        name: "",
+        number: ""
+    },
+    {
+        name: "",
+        number: ""
+    },
+    {
+        name: "",
+        number: ""
+    },
+    {
+        name: "",
+        number: ""
+    }
 
 ]
 const limit = 1;
