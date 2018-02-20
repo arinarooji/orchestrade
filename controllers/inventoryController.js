@@ -13,6 +13,7 @@ module.exports = {
   findById: function(req, res) {
     db.Inventory
       .findById(req.params.id)
+      .sort({ instrumentName: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -20,6 +21,7 @@ module.exports = {
   findBySchoolId: function(req, res) {
     db.Inventory
       .find({schoolId: req.params.id})
+      .sort({ instrumentName: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -38,12 +40,14 @@ module.exports = {
   findByCat: function(req, res) {
     db.Inventory
       .find({type: req.params.search})
+      .sort({ instrumentName: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.json(err));
   },
   findByInst: function(req, res){
     db.Inventory
     .find({instrumentName: new RegExp('^'+req.params.instrument+'$', "i")})
+    .sort({ instrumentName: 1 })
     .then(dbModel => res.json(dbModel))
     .catch(err => res.json(err));
   }
