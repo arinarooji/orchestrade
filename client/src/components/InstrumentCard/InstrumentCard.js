@@ -6,8 +6,18 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Form,
+  FormGroup,
+  Label, 
+  Input,
+  FormText
 } from "reactstrap";
+import Request from "../Request";
 import "./InstrumentCard.css"
 
 const InstrumentCard = props => {
@@ -26,7 +36,7 @@ const InstrumentCard = props => {
           </CardTitle>
           <CardSubtitle>Hosted By: {props.school}</CardSubtitle>
           <CardText>Some quick details about the {props.instrument}.</CardText>
-          <Button className="btn-block" onClick={props.clickEvent} uniqueId={props.uniqueId} data-instrument={props.instrument} data-src={props.link} type="submit">{props.action}</Button>
+          <Request/>
         </CardBody>
       </Card>
     </div>
