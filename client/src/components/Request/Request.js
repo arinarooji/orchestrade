@@ -15,22 +15,22 @@ export default class Request extends React.Component {
         <Form>
           <FormGroup>
             <Label for="length"><strong>Select the length you want to borrow Instrument</strong></Label> 
-            <Input type="select" name="select" id="exampleSelect">
+            <Input type="select" name="length" id="length">
               <option>3 Days</option>
               <option>1 Week</option>
               <option>1 Semester</option>
             </Input>
           </FormGroup>
           <FormGroup>
-            <Label for="length"><strong>Select the type of instrument you are looking to borrow</strong></Label>
-            <Input type="select" name="select" id="exampleSelect">
-              <option>Keys</option>
-              <option>String</option>
-              <option>Wind</option>
-            </Input>
+            <Label for="email"><strong>Provide an email address to best contact you</strong></Label>
+            <Input type="text" name="email" id="email" />
+          </FormGroup>          
+          <FormGroup>
+            <Label for="name"><strong>Provide full name</strong></Label>
+            <Input type="text" name="name" id="name" />
           </FormGroup>
           <FormGroup>
-            <Label for="Instrument"><strong>Name any specific insturment you would like to borrow</strong></Label>
+            <Label for="instrument"><strong>Name any specific insturment you would like to borrow</strong></Label>
             <Input type="text" id="instrument" placeholder="Instrument" />
           </FormGroup>
           <Button>Request</Button>
