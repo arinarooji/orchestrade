@@ -36,13 +36,13 @@ const SideNavi = props => {
           <NavIcon>
             <SvgIcon size={20} icon={ic_business} />
           </NavIcon>
-          <NavText><a data-value="account" onClick={props.whichLink}> Account</a> </NavText>
+          <NavText><a data-value="account" onClick={props.aLinkClicked}> Account</a> </NavText>
         </Nav>
         <Nav id="privacy"  onClick={props.linkClicked} >
           <NavIcon>
             <SvgIcon size={20} icon={wrench} />
           </NavIcon>
-          <NavText><a data-value="privacy" onClick={props.whichLink}> Privacy & Settings </a></NavText>
+          <NavText><a data-value="privacy" onClick={props.aLinkClicked}> Privacy & Settings </a></NavText>
         </Nav>
         <Nav id="about">
           <NavIcon>

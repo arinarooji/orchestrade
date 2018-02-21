@@ -32,9 +32,14 @@ export default {
   },
 
   //POST ROUTES
-  //Create an instrument
+  //Create an instrument (AddPage)
   createInstrument: function(instrumentData) {
     return axios.post("api/inventory", instrumentData);
-  }
+  },
 
+  //DELETE ROUTES
+  //Delete an instrument (ManagePage)
+  deleteInstrument: function(id) {
+    return axios.delete("/api/inventory/" + id);
+  }
 };
