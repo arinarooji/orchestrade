@@ -734,24 +734,44 @@ const schoolsList = [
         number: "980-343-1104"
     },
     {
-        name: "",
-        number: ""
+        name: "Olympic, School of Technology Entrepreneurship & Advanced Manufacturing",
+        number: "980-343-1113"
     },
     {
-        name: "",
-        number: ""
+        name: "Performance Learning Center",
+        number: "980-343-1118"
     },
     {
-        name: "",
-        number: ""
+        name: "Phillip O. Berry Academy of Technology",
+        number: "980-343-5992"
     },
     {
-        name: "",
-        number: ""
+        name: "Providence High School",
+        number: "980-343-5390"
     },
     {
-        name: "",
-        number: ""
+        name: "Rocky River High School",
+        number: "980-344-0409"
+    },
+    {
+        name: "South Mecklenburg High School",
+        number: "980-343-3600"
+    },
+    {
+        name: "West Charlotte High School",
+        number: "980-343-6060"
+    },
+    {
+        name: "West Mecklenburg High School",
+        number: "980-343-6080"
+    },
+    {
+        name: "William Amos Hough High School",
+        number: "980-344-0514"
+    },
+    {
+        name: "Zebulon B. Vance High School",
+        number: "980-343-5284"
     }
 
 ]
