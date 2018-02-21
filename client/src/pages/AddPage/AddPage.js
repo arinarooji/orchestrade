@@ -85,7 +85,6 @@ class AddPage extends Component {
   render() {
     return (
       <div>
-        <Navi />
         <Add handleClick={this.handleClick} />
         {this.shouldRender()}
         <Footer />

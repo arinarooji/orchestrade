@@ -88,7 +88,6 @@ class BrowsePage extends Component {
   render() {
     return (
       <div>
-        <Navi />
         <Search
           btnClick={this.btnSearch}
           yourValue={this.state.inputSearch}

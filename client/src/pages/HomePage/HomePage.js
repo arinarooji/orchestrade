@@ -8,7 +8,6 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <Navi />
         <Tilt className="Tilt" options={{ max: 10, scale: 1 }}>
           <section className="text-center Tilt-inner jumbotron">
             <div className="orgName">

@@ -86,7 +86,6 @@ class ManagePage extends Component {
   render() {
     return (
       <div>
-        <Navi />
         <Manage handleClick={this.handleClick}/>
           {this.shouldRender()}
         <Footer />

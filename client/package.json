@@ -4,6 +4,8 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@okta/okta-auth-js": "^1.13.0",
+    "@okta/okta-react": "0.0.12",
     "axios": "^0.17.1",
     "bootstrap": "^4.0.0",
     "history": "^4.7.2",
