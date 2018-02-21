@@ -490,16 +490,16 @@ const schoolsList = [
         number: "980-343-5820"
     },
     {
-        name: "",
-        number: ""
+        name: "Community House Middle School",
+        number: "980-343-0689"
     },
     {
-        name: "",
-        number: ""
+        name: "Coulwood STEM Academy",
+        number: "980-343-6090"
     },
     {
-        name: "",
-        number: ""
+        name: "Crestdale Middle School",
+        number: "980-343-5755"
     },
     {
         name: "",
