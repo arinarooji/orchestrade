@@ -2,8 +2,11 @@ import axios from "axios";
 
 export default {
   // Gets all users
-  getUsers: function() {
+  getUser: function() {
     return axios.get("/api/users");
+  },
+  createUser: function() {
+    return axios.post("/api/users");
   },
   // returns all inventory items
   getInventory: function(){

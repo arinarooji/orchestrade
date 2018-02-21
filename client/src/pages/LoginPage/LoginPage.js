@@ -3,7 +3,7 @@ import Login from "../../components/Login";
 import Signup from "../../components/Signup";
 import API from "../../utils/API";
 
-class LoginPage extends Component {
+class LoginPage extends React.Component {
 
   /**
    * Class constructor.
@@ -17,22 +17,15 @@ class LoginPage extends Component {
       user: {
         school: '',
         email: '',
-        name: '',
+        username: '',
         password: ''
       }
     };
 
-    
-
-    this.processForm = this.processForm.bind(this);
+    this.Form = this.Form.bind(this);
     this.changeUser = this.changeUser.bind(this);
   }
 
-  // /**
-  //  * Change the user object.
-  //  *
-  //  * @param {object} event - the JavaScript event object
-  //  */
   changeUser(event) {
     const field = event.target.name;
     const user = this.state.user;
@@ -43,61 +36,37 @@ class LoginPage extends Component {
     });
   }
 
+
+  // componentDidMount() {
+  //   this.createUser();
+  // }
+
+  // NEEDS WORK
+
   auth = event => {
-    console.log("api")
+    let user = {
+      school: this.state.user.school,
+      email: this.state.user.email,
+      username: this.state.user.username,
+      password: this.state.user.password
+    };
 
-    API.auth().then(results => {
-        console.log(results)
-
+    API.createUser(user).then(results => {
+      console.log(results)
       });
   };
-
-  // /**
-  //  * Process the form.
-  //  *
-  //  * @param {object} event - the JavaScript event object
-  //  */
-  processForm(event) {
-    
+  Form(event) {
     // prevent default action. in this case, action is the form submission event
     event.preventDefault();
+    let user = {
+      school: this.state.user.school,
+      email: this.state.user.email,
+      username: this.state.user.username,
+      password: this.state.user.password
+    }
+    // reach for our inventory and update our state
     this.auth()
-    const school = encodeURIComponent(this.state.user.school);
-    const email = encodeURIComponent(this.state.user.email);
-    const username = encodeURIComponent(this.state.user.username);
-    const password = encodeURIComponent(this.state.user.password);
-    const formData = `school=${school}&email=${email}&username=${username}&password=${password}`;
 
-    // create an AJAX request
-    // const xhr = new XMLHttpRequest();
-    // xhr.open('post', '/api/auth/signup');
-    // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    // xhr.responseType = 'json';
-
-
-    // xhr.addEventListener('load', () => {
-    //   if (xhr.status === 200) {
-    //     // success
-
-    //     // change the component-container state
-    //     this.setState({
-    //       errors: {}
-    //     });
-
-    //     console.log('The form is valid');
-    //   } else {
-    //     // failure
-
-    //     const errors = xhr.response.errors ? xhr.response.errors : {};
-    //     errors.summary = xhr.response.message;
-
-    //     this.setState({
-    //       errors
-    //     });
-    //   }
-    // });
-    // xhr.send(formData);
-  
     console.log('school:', this.state.user.school);
     console.log('email:', this.state.user.email);
     console.log('username:', this.state.user.username);
@@ -110,7 +79,7 @@ class LoginPage extends Component {
   render() {
     return (
       <Signup
-        onSubmit={this.processForm}
+        onSubmit={this.Form}
         onChange={this.changeUser}
         errors={this.state.errors}
         user={this.state.user}

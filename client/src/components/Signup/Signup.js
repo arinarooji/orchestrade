@@ -30,7 +30,7 @@ const Signup = ({
           <Col xs="12" lg="4" className="py-3">
           <h1>Create an Account</h1>
             <Form action="/" onSubmit={onSubmit}>
-            {errors.summary && <p className="error-message">{errors.summary}</p>}
+            {/* {errors.summary && <p className="error-message">{errors.summary}</p>} */}
               <FormGroup>
                 <Label for="school">School</Label>
                 <Input

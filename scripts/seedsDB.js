@@ -14,32 +14,29 @@ mongoose.connect(
 //Sample data here...
 const testCrowd = [
     {
-        userName: "JimmySmart",
-        firstName: "Jimmy",
-        lastName: "Neutron",
+        school: "Harvard",
+        email: "Jimmy@harvard.edu",
+        username: "JimmyNeutron",
         password: "IamGenius",
-        email: "Jimmy@gmail.com",
-        phone: '704-555-1212',
-        school: "High School High"
     },
-    {
-        userName: "FairlyOdd",
-        firstName: "Timmy",
-        lastName: "Turner",
-        password: "1234567",
-        email: "Timmy@gmail.com",
-        phone: '704-555-1212',
-        school: "High School 2"
-    },
-    {
-        userName: "IWillWin",
-        firstName: "Anakin",
-        lastName: "Skywalker",
-        password: "passwords",
-        email: "anakin@gmail.com",
-        phone: '704-555-1212',
-        school: "High School 3"
-    }
+    // {
+    //     userName: "FairlyOdd",
+    //     firstName: "Timmy",
+    //     lastName: "Turner",
+    //     password: "1234567",
+    //     email: "Timmy@gmail.com",
+    //     phone: '704-555-1212',
+    //     school: "High School 2"
+    // },
+    // {
+    //     userName: "IWillWin",
+    //     firstName: "Anakin",
+    //     lastName: "Skywalker",
+    //     password: "passwords",
+    //     email: "anakin@gmail.com",
+    //     phone: '704-555-1212',
+    //     school: "High School 3"
+    // }
 
 ]
 const limit = 1;

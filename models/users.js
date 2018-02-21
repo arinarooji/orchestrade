@@ -2,6 +2,7 @@
 
 //Dependencies
 const mongoose = require("mongoose");
+const bcrypt = require ("bcrypt")
 const Schema = mongoose.Schema;
 // handle our mongoose connection
 var db = mongoose.connection;
@@ -15,19 +16,29 @@ mongoose.connect(process.env.MURL || "mongodb://localhost/orchestradeDB");
 
 // mongoose.connect('mongodb://localhost/orchestradeDB');
 //Schema
+
 const usersSchema = new Schema({
-  userName: {
+  school: {
     type: String,
     required: true,
     unique: true
   },
-  firstName: {
+  email: {
     type: String,
     required: true,
+    unique: true,
+    validate: {
+      validator: function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      },
+      message: "Please enter a valid email!"
+    }
   },
-  lastName: {
+  username: {
     type: String,
     required: true,
+    unique: true
   },
   password: {
     type: String,
@@ -43,23 +54,17 @@ const usersSchema = new Schema({
       message: "Password needs to be longer than 6 Characters!"
     }
   },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    validate: {
-      validator: function validateEmail(email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-      },
-      message: "Please enter a valid email!"
+});
+
+usersSchema.pre('save', function (next) {
+  var user = this;
+  bcrypt.hash(user.password, 10, function (err, hash){
+    if (err) {
+      return next(err);
     }
-  },
-  school: {
-    type: String,
-    required: true,
-    unique: true
-  }
+    user.password = hash;
+    next();
+  })
 });
 
 const Users = mongoose.model("Users", usersSchema);
