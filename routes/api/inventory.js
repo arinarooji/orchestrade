@@ -10,10 +10,8 @@ router.route("/")
 router
   .route("/:id")
   .get(inventoryController.findBySchoolId)
-  //.get(inventoryController.findById) Two /:id routes do not work, use unique id routes if possible or find a workaround
-
+  .delete(inventoryController.remove);
   //.put(inventoryController.update)
-  //.delete(inventoryController.remove);
 
 router
   .route("/category/:search")
