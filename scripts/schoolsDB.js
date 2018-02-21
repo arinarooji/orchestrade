@@ -10,7 +10,7 @@ mongoose.connect(
     }
 );
 
-//Schools used to verify new user are from legitamit school
+//Schools used to verify new users are from legitamite school
 const schoolsList = [
 
     {
