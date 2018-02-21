@@ -502,44 +502,236 @@ const schoolsList = [
         number: "980-343-5755"
     },
     {
-        name: "",
-        number: ""
+        name: "Druid Hills Academy",
+        number: "980-343-5515"
     },
     {
-        name: "",
-        number: ""
+        name: "E. E. Waddell Language Academy",
+        number: "980-343-5815"
     },
     {
-        name: "",
-        number: ""
+        name: "Eastway Middle School",
+        number: "980-343-6410"
     },
     {
-        name: "",
-        number: ""
+        name: "Francis Bradley Middle School",
+        number: "980-343-5750"
     },
     {
-        name: "",
-        number: ""
+        name: "J.M. Alexander Middle School",
+        number: "980-343-3830"
     },
     {
-        name: "",
-        number: ""
+        name: "James Martin Middle School",
+        number: "980-343-5382"
     },
     {
-        name: "",
-        number: ""
+        name: "Jay M. Robinson Middle School",
+        number: "980-343-6944"
     },
     {
-        name: "",
-        number: ""
+        name: "John M. Morehead STEM Academy",
+        number: "980-343-5775"
     },
     {
-        name: "",
-        number: ""
+        name: "John Taylor Williams Secondary Montessori",
+        number: "980-343-0040"
     },
     {
-        name: "",
-        number: ""
+        name: "Kennedy Middle School",
+        number: "980-343-5540"
+    },
+    {
+        name: "Marie G. Davis",
+        number: "980-343-0006"
+    },
+    {
+        name: "Martin Luther King, Jr. Middle School",
+        number: "980-343-0698"
+    },
+    {
+        name: "McClintock Middle School",
+        number: "980-343-6425"
+    },
+    {
+        name: "Mint Hill Middle School",
+        number: "980-343-5439"
+    },
+    {
+        name: "Mountain Island Lake Academy",
+        number: "980-343-6948"
+    },
+    {
+        name: "Northeast Middle School",
+        number: "980-343-6920"
+    },
+    {
+        name: "Northridge Middle School",
+        number: "980-343-5015"
+    },
+    {
+        name: "Northwest School of the Arts",
+        number: "980-343-5500"
+    },
+    {
+        name: "Oaklawn Language Academy",
+        number: "980-343-0400"
+    },
+    {
+        name: "Piedmont Middle School",
+        number: "980-343-5435"
+    },
+    {
+        name: "Quail Hollow Middle School",
+        number: "980-343-3620"
+    },
+    {
+        name: "Randolph Middle School",
+        number: "980-343-6700"
+    },
+    {
+        name: "Ranson Middle School",
+        number: "980-343-6800"
+    },
+    {
+        name: "Reid Park Academy",
+        number: "980-343-5035"
+    },
+    {
+        name: "Ridge Road Middle School",
+        number: "980-344-3410"
+    },
+    {
+        name: "Sedgefield Middle School",
+        number: "980-343-5840"
+    },
+    {
+        name: "South Charlotte Middle School",
+        number: "980-343-3670"
+    },
+    {
+        name: "Southwest Middle School",
+        number: "980-343-5006"
+    },
+    {
+        name: "Thomasboro Academy",
+        number: "Thomasboro Academy"
+    },
+    {
+        name: "Walter G. Byers School",
+        number: "980-343-6940"
+    },
+    {
+        name: "Westerly Hills Academy",
+        number: "980-343-6021"
+    },
+    {
+        name: "WhiteWater Middle School",
+        number: "980-344-3400"
+    },
+    {
+        name: "Ardrey Kell High School",
+        number: "980-343-0860"
+    },
+    {
+        name: "Butler High School",
+        number: "980-343-6300"
+    },
+    {
+        name: "Cato Middle College High School",
+        number: "980-343-1452"
+    },
+    {
+        name: "Charlotte Engineering Early College",
+        number: "980-343-9898"
+    },
+    {
+        name: "Charlotte Teacher Early College",
+        number: "980-343-9898"
+    },
+    {
+        name: "East Mecklenburg High School",
+        number: "980-343-6430"
+    },
+    {
+        name: "eLearning Academy",
+        number: "980-343-3666"
+    },
+    {
+        name: "Garinger High School",
+        number: "980-343-6450"
+    },
+    {
+        name: "Harding University High School",
+        number: "980-343-6007"
+    },
+    {
+        name: "Harper Middle College High School",
+        number: "980-343-0012"
+    },
+    {
+        name: "Hawthorne Academy of Health Sciences",
+        number: "980-343-6011"
+    },
+    {
+        name: "Hopewell High School",
+        number: "980-343-5988"
+    },
+    {
+        name: "iMeck at Cochrane",
+        number: "980-343-6460"
+    },
+    {
+        name: "Independence High School",
+        number: "980-343-6900"
+    },
+    {
+        name: "John Taylor Williams Secondary Montessori",
+        number: "980-343-0040"
+    },
+    {
+        name: "Levine Middle College High",
+        number: "980-343-9437"
+    },
+    {
+        name: "Mallard Creek High School",
+        number: "980-343-1341"
+    },
+    {
+        name: "Merancas Middle College @ CPCC",
+        number: "980-343-0035"
+    },
+    {
+        name: "Military and Global Leadership Academy",
+        number: "980-343-6011"
+    },
+    {
+        name: "Myers Park High School",
+        number: "980-343-5800"
+    },
+    {
+        name: "North Mecklenburg High School",
+        number: "980-343-3840"
+    },
+    {
+        name: "Northwest School of the Arts",
+        number: "980-343-5500"
+    },
+    {
+        name: "Olympic, Biotechnology, Health and Public Administration",
+        number: "980-343-1110"
+    },
+    {
+        name: "Olympic, Math, Engineering, Technology and Science",
+        number: "980-343-1101"
+    },
+    {
+        name: "Olympic, Renaissance School of Arts and Technology",
+        number: "980-343-1107"
+    },
+    {
+        name: "Olympic, School of Executive Leadership & Entrepreneurial Development",
+        number: "980-343-1104"
     },
     {
         name: "",
