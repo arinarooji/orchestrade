@@ -8,7 +8,7 @@ var mailgun = require('mailgun-js')({
 });
 
 //mailgun 
-router.post('/message', function (req, res) {
+router.post('/browse', function (req, res) {
   let length = req.body.length;
   let email = req.body.email;
   let name = req.body.name;
@@ -21,7 +21,8 @@ router.post('/message', function (req, res) {
           <li> Phone: ${req.body.instrument}</li>
           <li> Length: ${req.body.length}</li>
       </ul>
-  `
+    `
+  
   var data = {
       from: 'Orchestrade <portillacris@gmail.com> ',
       to: 'portillacris@gmail.com',

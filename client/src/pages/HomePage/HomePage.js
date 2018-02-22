@@ -3,16 +3,9 @@ import Navi from "../../components/Navi";
 import Tilt from "react-tilt";
 import Carousel from "../../components/Carousel";
 import About from "../../components/About";
-<<<<<<< HEAD
-import "./HomePage.css";
-import Carousel from "../../components/Carousel/Carousel";
-import Testimony from "../../components/Testimony";
-import Footer from "../../components/Footer";
-=======
 import Testimony from "../../components/Testimony";
 import Footer from "../../components/Footer";
 // import "./HomePage.css";
->>>>>>> 90cc335d65ee8108a92f7ae01eba4cd0d2467b54
 
 class HomePage extends Component {
   render() {
@@ -31,17 +24,6 @@ class HomePage extends Component {
                   </a>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </section>
-        </Tilt>
-        <section className="part2">
-          <hr />
-        </section>
-        <About />
-        <Carousel />
-        <Testimony />
-=======
             </section>
           </Tilt>
           <Carousel />
@@ -49,7 +31,6 @@ class HomePage extends Component {
           <Testimony />
           <Footer />
         </div>
->>>>>>> 90cc335d65ee8108a92f7ae01eba4cd0d2467b54
       </div>
     );
   }

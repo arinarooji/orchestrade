@@ -50,29 +50,13 @@ class BrowsePage extends Component {
     );
     this.setState({ searchInventory });
   };
-  // looping through the inventory state and passing the inventory properties to each item defined
-  renderInventory = () => {
-    return (
-      <div className="inventorySect col-12 px-0 mx-0">
-        <h1 class="available">
-          Available Instruments
-        </h1>
-        <ul className="list-inline list-unstyled px-0 mx-0">
-          {this.state.inventory.map(cat => (
-            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
-              <InstrumentCard
-                key={cat._id}
-                uniqueId={cat._id}
-                type={cat.type}
-                link={cat.image}
-                brand={cat.brand}
-                instrument={cat.instrumentName}
-                school={cat.school}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
+  // search event for buttons
+  btnSearch = event => {
+    const buttonSearchResult = event.currentTarget.dataset.value;
+    const searchInventory = this.filterResults(
+      this.state.inventory,
+      buttonSearchResult,
+      "type"
     );
     this.setState({ searchInventory });
   };
