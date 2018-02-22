@@ -95,9 +95,12 @@ class ManagePage extends Component {
     return (
       <div>
         <Navi />
-        <Manage handleClick={this.handleClick}/>
-          {this.shouldRender()}
-        <Footer />
+
+        <div className="fadeIn">
+          <Manage handleClick={this.handleClick}/>
+            {this.shouldRender()}
+          <Footer />
+        </div>
       </div>
     );
   }

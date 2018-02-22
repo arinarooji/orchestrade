@@ -40,9 +40,6 @@ export default class Navi extends Component {
                   <NavLink href="/">Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/about">About</NavLink>
-                </NavItem>
-                <NavItem>
                   <NavLink href="/browse">Browse</NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>

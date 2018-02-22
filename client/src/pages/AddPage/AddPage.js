@@ -165,33 +165,36 @@ class AddPage extends Component {
     return (
       <div>
         <Navi />
-        <Add handleClick={this.handleClick} />
-        {this.shouldRender()}
+        <div className="fadeIn">
+          <Add handleClick={this.handleClick} />
+          {this.shouldRender()}
 
-        {/* Start of Modal */}
-        {/* It would be best to separate this modal, but this works for now (easier to pass information) */}
-        <div>
-          <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-            <ModalHeader toggle={this.toggle} className="bg-dark text-white">{this.state.instrumentName}</ModalHeader>
-            <ModalBody>
-              <img className="img-fluid text-center" width="250" height="250" src={this.state.instrumentImage}/>
-              <InputGroup className="my-3">
-                <InputGroupAddon addonType="prepend">Brand </InputGroupAddon>
-                <Input value={this.state.brandInput} onChange={evt => this.updateInputValue(evt)} maxLength="50" data-field="brand"/>
-              </InputGroup>
-              <InputGroup className="my-3">
-                <InputGroupAddon addonType="prepend">Details</InputGroupAddon>
-                <Input value={this.state.detailsInput} onChange={evt => this.updateInputValue(evt)} maxLength="120" data-field="details"/>
-              </InputGroup>
-            </ModalBody>
-            <ModalFooter className="bg-dark">
-              <Button color="primary" onClick={this.handleAddClick} data-value>Upload</Button>{' '}
-              <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-            </ModalFooter>
-          </Modal>
-        </div> {/* End of Modal */}
+          {/* Start of Modal */}
+          {/* It would be best to separate this modal, but this works for now (easier to pass information) */}
+          <div>
+            <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+              <ModalHeader toggle={this.toggle} className="bg-dark text-white">{this.state.instrumentName}</ModalHeader>
+              <ModalBody>
+                <img className="img-fluid text-center" width="250" height="250" src={this.state.instrumentImage}/>
+                <InputGroup className="my-3">
+                  <InputGroupAddon addonType="prepend">Brand </InputGroupAddon>
+                  <Input value={this.state.brandInput} onChange={evt => this.updateInputValue(evt)} maxLength="50" data-field="brand"/>
+                </InputGroup>
+                <InputGroup className="my-3">
+                  <InputGroupAddon addonType="prepend">Details</InputGroupAddon>
+                  <Input value={this.state.detailsInput} onChange={evt => this.updateInputValue(evt)} maxLength="120" data-field="details"/>
+                </InputGroup>
+              </ModalBody>
+              <ModalFooter className="bg-dark">
+                <Button color="primary" onClick={this.handleAddClick} data-value>Upload</Button>{' '}
+                <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+              </ModalFooter>
+            </Modal>
+          </div> {/* End of Modal */}
+
+          <Footer />
+        </div>
         
-        <Footer />
       </div>
     ); //End of return()
 
