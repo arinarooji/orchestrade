@@ -1,10 +1,29 @@
-* {margin: 0; padding: 0;}
-html, body {width: 100%; height: 100%; }
-/*body {overflow-x: hidden;}*/
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+.addSpace {
+  margin-top: 0;
+  padding: 0px;
+  background-color: #fff; }
 
-/* Page Animation */
-.fadeIn { animation: fadeIn 1.2s both; }
-@keyframes fadeIn {
-    0%    { opacity: 0; }
-    100%  { opacity: 1; }
-}
+.jumbotron {
+  background-image: url("./image/piano.jpg");
+  background-position: center;
+  height: 60vh;
+  color: #fff; }
+
+.Tilt {
+  transform-style: preserve-3d; }
+
+.orgName {
+  color: #fff;
+  transform: translateZ(20px); }
+  .orgName h1 {
+    font-size: 50px; }
+  .orgName .lead {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 30px; }
+
+.part2 {
+  margin-top: 20px;
+  background-color: #0f0a07; }
+
+/*# sourceMappingURL=App.css.map */

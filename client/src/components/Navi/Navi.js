@@ -30,7 +30,7 @@ export default class Navi extends Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light expand="md">
+        <Navbar id="mainNav" color="faded" light expand="md">
           <div className="container">
             <NavbarBrand href="/">Orchestrade</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />

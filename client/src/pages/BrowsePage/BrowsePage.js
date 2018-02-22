@@ -105,7 +105,8 @@ class BrowsePage extends Component {
     return (
       <div>
         <Navi />
-        <div className="addSpace fadeIn">
+        <div className="addSpace"></div>
+        <div className="fadeIn">
           <Search
             btnClick={this.btnSearch}
             yourValue={this.state.inputSearch}

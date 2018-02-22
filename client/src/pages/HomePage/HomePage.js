@@ -5,7 +5,7 @@ import Carousel from "../../components/Carousel";
 import About from "../../components/About";
 import Testimony from "../../components/Testimony";
 import Footer from "../../components/Footer";
-import "./HomePage.css";
+// import "./HomePage.css";
 
 class HomePage extends Component {
   render() {
