@@ -3,7 +3,11 @@ import Navi from "../../components/Navi";
 import Search from "../../components/Search";
 import InstrumentCard from "../../components/InstrumentCard";
 import Footer from "../../components/Footer";
+<<<<<<< HEAD
 import "./BrowsePage.css";
+=======
+import "./BrowsePage.css"
+>>>>>>> cffeb85edc70f2e4f2f5f2f215baca438f5b5c05
 import API from "../../utils/API";
 
 class BrowsePage extends Component {
@@ -50,6 +54,7 @@ class BrowsePage extends Component {
     );
     this.setState({ searchInventory });
   };
+<<<<<<< HEAD
   // search event for buttons
   btnSearch = event => {
     const buttonSearchResult = event.currentTarget.dataset.value;
@@ -57,6 +62,31 @@ class BrowsePage extends Component {
       this.state.inventory,
       buttonSearchResult,
       "type"
+=======
+  // looping through the inventory state and passing the inventory properties to each item defined
+  renderInventory = () => {
+    return (
+      <div className="inventorySect col-12 px-0 mx-0">
+        <h1 class="available">
+          Available Instruments
+        </h1>
+        <ul className="list-inline list-unstyled px-0 mx-0">
+          {this.state.inventory.map(cat => (
+            <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+              <InstrumentCard
+                key={cat._id}
+                uniqueId={cat._id}
+                type={cat.type}
+                link={cat.image}
+                brand={cat.brand}
+                instrument={cat.instrumentName}
+                school={cat.school}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+>>>>>>> cffeb85edc70f2e4f2f5f2f215baca438f5b5c05
     );
     this.setState({ searchInventory });
   };
