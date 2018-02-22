@@ -8,7 +8,7 @@ var mailgun = require('mailgun-js')({
 });
 
 //mailgun 
-router.post('/browse', function (req, res) {
+router.post('/message', function (req, res) {
   let length = req.body.length;
   let email = req.body.email;
   let name = req.body.name;
@@ -32,6 +32,7 @@ router.post('/browse', function (req, res) {
 
   mailgun.messages().send(data, function (error, body) {
       console.log(body);
+      alert("Your Request has been Submitted");
   });
 }),
 

@@ -3,11 +3,7 @@ import Navi from "../../components/Navi";
 import Search from "../../components/Search";
 import InstrumentCard from "../../components/InstrumentCard";
 import Footer from "../../components/Footer";
-<<<<<<< HEAD
-import "./BrowsePage.css";
-=======
 import "./BrowsePage.css"
->>>>>>> cffeb85edc70f2e4f2f5f2f215baca438f5b5c05
 import API from "../../utils/API";
 
 class BrowsePage extends Component {
@@ -54,15 +50,6 @@ class BrowsePage extends Component {
     );
     this.setState({ searchInventory });
   };
-<<<<<<< HEAD
-  // search event for buttons
-  btnSearch = event => {
-    const buttonSearchResult = event.currentTarget.dataset.value;
-    const searchInventory = this.filterResults(
-      this.state.inventory,
-      buttonSearchResult,
-      "type"
-=======
   // looping through the inventory state and passing the inventory properties to each item defined
   renderInventory = () => {
     return (
@@ -86,7 +73,6 @@ class BrowsePage extends Component {
           ))}
         </ul>
       </div>
->>>>>>> cffeb85edc70f2e4f2f5f2f215baca438f5b5c05
     );
     this.setState({ searchInventory });
   };
