@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+#mainNav {
+  background-color: #0f0a07; }
+  #mainNav .navbar-light, #mainNav .navbar-nav, #mainNav .nav-link, #mainNav .navbar-brand {
+    color: #fff; }
+  #mainNav .dropdown {
+    color: #0f0a07 !important; }
+  #mainNav .navbar-light, #mainNav .navbar-toggler {
+    border-color: #fff; }
+
 .addSpace {
   margin-top: 0;
   padding: 0px;
@@ -8,7 +17,8 @@
   background-image: url("./image/piano.jpg");
   background-position: center;
   height: 60vh;
-  color: #fff; }
+  color: #fff;
+  border-radius: 0 !important; }
 
 .Tilt {
   transform-style: preserve-3d; }

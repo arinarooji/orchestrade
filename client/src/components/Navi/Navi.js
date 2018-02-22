@@ -48,17 +48,17 @@ export default class Navi extends Component {
                   </DropdownToggle>
                   <DropdownMenu>
                     <DropdownItem>
-                      <NavLink href="/add">Add Instruments</NavLink>
+                      <NavLink className="dropdown" href="/add">Add Instruments</NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <NavLink href="/manage">Manage Instruments</NavLink>
+                      <NavLink className="dropdown" href="/manage">Manage Instruments</NavLink>
                     </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>
-                      <NavLink href="/settings">Settings</NavLink>
+                      <NavLink className="dropdown" href="/settings">Settings</NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <NavLink href="/#">Log Out</NavLink>
+                      <NavLink className="dropdown" href="/#">Log Out</NavLink>
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
