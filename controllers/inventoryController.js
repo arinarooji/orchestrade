@@ -50,7 +50,14 @@ module.exports = {
     .sort({ instrumentName: 1 })
     .then(dbModel => res.json(dbModel))
     .catch(err => res.json(err));
-  }
+  },
   //Delete
-  //...
+  //Remove a selected instrument (ManagePage)
+  remove: function(req, res) {
+    db.Inventory
+      .findById({ _id: req.params.id })
+      .then(dbModel => dbModel.remove())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  }
 };

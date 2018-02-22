@@ -67,8 +67,16 @@ class ManagePage extends Component {
 
   //Remove Instrument click event
   handleManageClick = (event) => {
-    console.log("Delete this instrument");
-    //...
+
+    //Reference the mongoId of the selected instrument
+    let mongoId = event.target.getAttribute('uniqueid');
+
+    //findById and delete the instrument in inventory
+    API.deleteInstrument(mongoId).then(result => {
+      
+      //Get the user's updated inventory
+      this.getInventoryBySchoolId(this.state.schoolId);
+    });
   }
 
   //This function renders either the entire user inventory, or the filtered inventory
@@ -87,9 +95,12 @@ class ManagePage extends Component {
     return (
       <div>
         <Navi />
-        <Manage handleClick={this.handleClick}/>
-          {this.shouldRender()}
-        <Footer />
+
+        <div className="fadeIn">
+          <Manage handleClick={this.handleClick}/>
+            {this.shouldRender()}
+          <Footer />
+        </div>
       </div>
     );
   }

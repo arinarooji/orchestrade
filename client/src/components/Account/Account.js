@@ -4,6 +4,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 const AccountDetail = props => {
   return (
     <Form>
+      <h3>Account Details</h3>
       <FormGroup>
         <div className="row">
           <div className="col-md-2">

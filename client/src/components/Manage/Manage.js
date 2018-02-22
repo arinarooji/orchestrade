@@ -19,7 +19,7 @@ const Manage = props => {
           <p className="lead">Conduct your instruments.</p>
           <hr className="my-2" />
           <p className="lead">
-            <ButtonGroup size="">
+            <ButtonGroup className="btn-group-sm">
               <Button onClick={() => props.handleClick("Brass")}>Brass</Button>
               <Button onClick={() => props.handleClick("Keyboard")}>Keyboard</Button>
               <Button onClick={() => props.handleClick("Percussion")}>Percussion</Button>
