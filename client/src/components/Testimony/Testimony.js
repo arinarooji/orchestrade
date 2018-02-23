@@ -16,33 +16,36 @@ export default class Testimony extends React.Component {
           <Col xs="12" lg="4" className="pb-4">
             <center>
               <i>
-                "É um facto estabelecido de que um leitor é distraído pelo
-                conteúdo legível de uma página quando analisa a sua mancha
-                gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais
-                ou menos normal de letras, ao contrário do uso de "Conteúdo
-                aqui, conteúdo aqui", tornando-o texto legível"
+                "Without Orchestrade, I dont know where we would have 
+                gotten all the instruments that we used during this 
+                competition. Awesome idea! Glad they started this new 
+                concept for music programs and to have thse kids be 
+                very creative and express themselves!"
+                <br/> -2018 County Music Champs
               </i>
             </center>
           </Col>
           <Col xs="12" lg="4" className="pb-4">
             <center>
               <i>
-                "É um facto estabelecido de que um leitor é distraído pelo
-                conteúdo legível de uma página quando analisa a sua mancha
-                gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais
-                ou menos normal de letras, ao contrário do uso de "Conteúdo
-                aqui, conteúdo aqui", tornando-o texto legível"
+                "Being parents of two kids, that want to take music classes and also
+                perform with the school band, i wasn't sure how i would be able to supply
+                them with the instruments that they need. Luckily their school was a
+                member with Orchestrade and able to find the instruments my children needed
+                in order to participate in the music program"
+                <br/> -Parents of two middle schoolers
               </i>
             </center>
           </Col>
           <Col xs="12" lg="4" className="pb-4">
             <center>
               <i>
-                "É um facto estabelecido de que um leitor é distraído pelo
-                conteúdo legível de uma página quando analisa a sua mancha
-                gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais
-                ou menos normal de letras, ao contrário do uso de "Conteúdo
-                aqui, conteúdo aqui", tornando-o texto legível"
+                "With all this talk about ending music progam due to budget cuts,
+                and not enough funding. Orchestrade has definitely stepped up to
+                help many schools with getting the instruments that they need and 
+                don't have enough funding for it! Music can now live now with 
+                these young kids!"
+                <br/> -High school Conductor
               </i>
             </center>
           </Col>

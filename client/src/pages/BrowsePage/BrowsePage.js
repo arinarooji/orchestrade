@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { Button, Form, Row, FormGroup, Label, Col, Container, Input, FormText, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Navi from "../../components/Navi";
 import Search from "../../components/Search";
+//import Request from "../../components/Request"
 import InstrumentCard from "../../components/InstrumentCard";
 import Footer from "../../components/Footer";
 import "./BrowsePage.css"
@@ -12,8 +14,14 @@ class BrowsePage extends Component {
     inventory: [],
     buttonSearch: "",
     inputSearch: "",
-    searchInventory: []
+    searchInventory: [],
+    modal: false
   };
+
+  constructor(props) {
+    super(props);
+    this.toggle = this.toggle.bind(this);
+  }
 
   componentDidMount() {
     this.getInventory();
@@ -72,6 +80,14 @@ class BrowsePage extends Component {
     console.log(searchInventory);
   };
 
+  // Handles Request 
+  toggle(event) {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+
   // looping through the inventory state and passing the inventory properties to each item defined
   renderInventory = theState => {
     const stateRender = theState;
@@ -92,7 +108,7 @@ class BrowsePage extends Component {
                 instrument={cat.instrumentName}
                 school={cat.school}
                 action="Request Instrument" //The innerHTML of the button
-                clickEvent={this.handleRequestClick} //The button's page specific click event (requesting intruments)
+               clickEvent={this.toggle} //The button's page specific click event (requesting intruments)
               />
             </li>
           ))}
@@ -116,11 +132,45 @@ class BrowsePage extends Component {
           {this.state.searchInventory.length > 0
             ? this.renderInventory(this.state.searchInventory)
             : this.renderInventory(this.state.inventory)}
-        </div>
+        
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+        <ModalBody>
+          <Form method ="POST">          
+            <FormGroup>
+              <Label for="length"><strong>Select the length you want to borrow Instrument</strong></Label> 
+              <Input type="select" name="length" id="length">
+                <option>3 Days</option>
+                <option>1 Week</option>
+                <option>1 Semester</option>
+              </Input>
+            </FormGroup>
+            <FormGroup>
+              <Label for="email"><strong>Provide an email address to best contact you</strong></Label>
+              <Input type="text" name="email" id="email" />
+            </FormGroup>          
+            <FormGroup>
+              <Label for="name"><strong>Provide full name</strong></Label>
+              <Input type="text" name="name" id="name" />
+            </FormGroup>
+            <FormGroup>
+              <Label for="instrument"><strong>Name any specific insturment you would like to borrow</strong></Label>
+              <Input type="text" id="instrument" placeholder="Instrument" />
+            </FormGroup>
+          </Form>            
+        </ModalBody>          
+        <ModalFooter>
+          <Button color="primary" onClick={this.toggle}>Request</Button>
+        </ModalFooter>
+      </Modal>
         <Footer />
       </div>
+    </div>
+
     );
-  }
+  
 }
+
+  }
 
 export default BrowsePage;

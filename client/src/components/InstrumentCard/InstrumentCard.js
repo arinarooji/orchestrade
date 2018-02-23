@@ -36,7 +36,7 @@ const InstrumentCard = props => {
           </CardTitle>
           <CardSubtitle>Hosted By: {props.school}</CardSubtitle>
           <CardText>Some quick details about the {props.instrument}.</CardText>
-          <Request/>
+          <Button className="btn-block" onClick={props.clickEvent} uniqueId={props.uniqueId} data-instrument={props.instrument} data-src={props.link} type="submit">{props.action}</Button>
         </CardBody>
       </Card>
     </div>
