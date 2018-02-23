@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+
+html { overflow-y: scroll; } /* Prevent scrollbar jump (forces scrollbar on every page)*/
 #mainNav {
   background-color: #0f0a07; }
   #mainNav .navbar-light, #mainNav .navbar-nav, #mainNav .nav-link, #mainNav .navbar-brand {
@@ -52,7 +54,7 @@
 /*# sourceMappingURL=App.css.map */
 
 /* Page Animation */
-.fadeIn { animation: fadeIn 1s both; }
+.fadeIn { animation: fadeIn 2s both; }
 @keyframes fadeIn {
     0%    { opacity: 0; }
     100%  { opacity: 1; }
