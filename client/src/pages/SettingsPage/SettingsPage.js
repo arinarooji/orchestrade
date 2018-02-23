@@ -35,7 +35,6 @@ class Settings extends Component {
   render() {
     return (
       <div>
-        <Navi />
         <div className="addSpace">
         <div id="mobile">
           <SettingsMobile aLinkClicked={this.clickedPage}

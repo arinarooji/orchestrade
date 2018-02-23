@@ -164,7 +164,6 @@ class AddPage extends Component {
   render() {
     return (
       <div>
-        <Navi />
         <div className="fadeIn">
           <Add handleClick={this.handleClick} />
           {this.shouldRender()}

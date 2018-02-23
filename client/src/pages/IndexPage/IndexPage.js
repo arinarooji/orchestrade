@@ -11,7 +11,6 @@ class IndexPage extends Component {
   render() {
     return (
       <div>
-        <Navi />        
         <Jumbo />
         <AboutUs />
         <Footer />

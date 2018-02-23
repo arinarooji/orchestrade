@@ -120,7 +120,6 @@ class BrowsePage extends Component {
   render() {
     return (
       <div>
-        <Navi />
         <div className="addSpace"></div>
         <div className="fadeIn">
           <Search

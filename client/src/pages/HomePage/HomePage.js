@@ -11,7 +11,6 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <Navi />
         <div className="fadeIn">
           <Tilt className="Tilt" options={{ max: 10, scale: 1 }}>
             <section className="text-center Tilt-inner jumbotron">
@@ -19,7 +18,7 @@ class HomePage extends Component {
                 <h1>Orchestrade</h1>
                 <p className="lead">Musica Vivit In Aeternum</p>
                 <div className="startBtn">
-                  <a className="btn btn-primary" href="/login">
+                  <a className="btn btn-primary" href="/signup">
                     Get Started
                   </a>
                 </div>
