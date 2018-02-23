@@ -23,7 +23,7 @@ export default class Request extends React.Component {
       <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
         <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
         <ModalBody>
-          <Form>          
+          <Form method ="POST">          
             <FormGroup>
               <Label for="length"><strong>Select the length you want to borrow Instrument</strong></Label> 
               <Input type="select" name="length" id="length">

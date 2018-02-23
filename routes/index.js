@@ -24,7 +24,7 @@ router.post('/browse', function (req, res) {
     `
   
   var data = {
-      from: 'Orchestrade <portillacris@gmail.com> ',
+      from: 'Orchestrade <postmaster@sandboxd7819a789d23412581323c5ab0971dd5.mailgun.org> ',
       to: 'portillacris@gmail.com',
       subject: 'An Instrument Request',
       text: 'Testing some Mailgun awesomness!',
@@ -33,7 +33,6 @@ router.post('/browse', function (req, res) {
 
   mailgun.messages().send(data, function (error, body) {
       console.log(body);
-      alert("Your Request has been Submitted");
   });
 }),
 
