@@ -36,7 +36,7 @@ export default class Login extends Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light expand="md">
+        <Navbar id="mainNav" color="faded" light expand="md">
           <div className="container">
             <NavbarBrand href="/home">Orchestrade</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />

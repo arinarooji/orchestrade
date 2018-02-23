@@ -17,8 +17,10 @@ const Signup = () => {
         <Row>
           <Col xs="12" lg="6" className="py-3">
             <img
-              src="http://via.placeholder.com/700x400"
-              className="img-fluid"
+              src= "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/G-clef.svg/601px-G-clef.svg.png"
+              //"http://via.placeholder.com/700x400"
+              className="mx-auto d-block"
+              height="500"
             />
           </Col>
           <Col xs="12" lg="4" className="py-3">
