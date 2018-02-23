@@ -55,6 +55,23 @@ $gold-color: #c0b283;
   }
 }
 
+.quote {
+  margin: -32px;
+  background-color: $deep-black;
+  color: $white-text;
+  height: auto;
+}
+
+#carouselSection {
+  background-color: $deep-black;
+
+  #theCarousel {
+    max-width: 80%;
+    margin: auto;
+    padding: 15px;
+  }
+}
+
 .part2 {
   margin-top: 20px;
   background-color: $deep-black;
