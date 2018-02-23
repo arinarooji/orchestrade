@@ -26,8 +26,18 @@ class HomePage extends Component {
               </div>
             </section>
           </Tilt>
-          <Carousel />
+          <blockquote class="blockquote quote text-center">
+            <div className="container">
+              <p class="mb-0">The true beauty of music is that it connects people. It carries a message, and we, the musicians, are the messengers.</p>
+              <footer class="blockquote-footer">Roy Ayers</footer>
+            </div>
+          </blockquote>
           <About />
+          <div id="carouselSection">
+            <div id="theCarousel">
+            <Carousel />
+            </div>
+          </div>
           <Testimony />
           <Footer />
         </div>
