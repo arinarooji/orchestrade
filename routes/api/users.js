@@ -5,12 +5,14 @@ const oktaClient = require('../../lib/oktaClient');
 // Matches with "/api/users"
 
 router.post('/', (req, res, next) => {
+  console.log("this is the", req.body)
   if (!req.body) return res.sendStatus(400);
   const newUser = {
     profile: {
-      school: req.body.school,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
       email: req.body.email,
-      username: req.body.username,
+      login: req.body.email,
     },
     credentials: {
       password: {
@@ -18,12 +20,15 @@ router.post('/', (req, res, next) => {
       }
     }
   };
+  
   oktaClient.createUser(newUser)
     .then(user => {
+      console.log(user);
       res.status(201);
       res.send(user);
     })
     .catch(err => {
+      console.log(err);
       res.status(400);
       res.send(err);
     })
