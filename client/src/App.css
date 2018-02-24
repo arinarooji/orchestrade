@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
 
-html { overflow-y: scroll; } /* Prevent scrollbar jump (forces scrollbar on every page)*/
+html { overflow-y: scroll; overflow-x: hidden;} /* Prevent scrollbar jump (forces scrollbar on every page)*/
 #mainNav {
   background-color: #0f0a07; }
   #mainNav .navbar-light, #mainNav .navbar-nav, #mainNav .nav-link, #mainNav .navbar-brand {
@@ -50,6 +50,10 @@ html { overflow-y: scroll; } /* Prevent scrollbar jump (forces scrollbar on ever
 .part2 {
   margin-top: 20px;
   background-color: #0f0a07; }
+
+#message {
+  resize: none;
+}
 
 /*# sourceMappingURL=App.css.map */
 

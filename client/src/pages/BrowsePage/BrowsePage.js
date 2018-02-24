@@ -133,7 +133,7 @@ class BrowsePage extends Component {
             : this.renderInventory(this.state.inventory)}
         
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-        <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+        <ModalHeader toggle={this.toggle} className="text-white bg-dark">Request Form</ModalHeader>
         <ModalBody>
           <Form method ="POST">          
             <FormGroup>
@@ -144,6 +144,10 @@ class BrowsePage extends Component {
                 <option>1 Month</option>
                 <option>1 Semester</option>
               </Input>
+            </FormGroup>
+            <FormGroup>
+              <Label for="message"><strong>Your Message:</strong></Label>
+              <Input type="textarea" name="message" id="message" rows="4" maxLength="200" />
             </FormGroup>
             {/* <FormGroup>
               <Label for="email"><strong>Provide an email address to best contact you</strong></Label>
@@ -159,8 +163,8 @@ class BrowsePage extends Component {
             </FormGroup> */}
           </Form>            
         </ModalBody>          
-        <ModalFooter>
-          <Button color="primary" onClick={this.toggle}>Request</Button>
+        <ModalFooter className="bg-dark">
+          <Button color="primary" onClick={this.toggle}>Send Request Email</Button>
         </ModalFooter>
       </Modal>
         <Footer />
