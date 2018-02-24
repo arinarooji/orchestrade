@@ -15,6 +15,7 @@ import SettingsPage from './pages/SettingsPage'
 import Navi from './components/Navi'
 import Signup from './components/Signup'
 
+
 class App extends Component {
   render() {
     return (
