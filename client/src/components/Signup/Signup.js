@@ -142,10 +142,11 @@ export default withAuth(class Signup extends Component{
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="Minimum of 6 characters"
+                  placeholder="Minimum of 8 characters"
                   value={this.state.password} 
                   onChange={this.handlePasswordChange}
                 />
+                <Label for="password" className="small"><i>Include a minimum of 1 uppercase letter and a number</i></Label>
               </FormGroup>
               <FormGroup className="text-center">
               <Button className="btn btn-sm btn-outline-primary my-4 btn-block" type="submit">Sign Up</Button>

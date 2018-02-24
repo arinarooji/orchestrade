@@ -20,9 +20,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Navi />
         <Router>
           <div>
+          <Navi />
             <Switch>
               <Route exact path="/" component={HomePage}/>
               <Route exact path="/login" render={() => <LoginPage baseUrl={config.url} />}/>

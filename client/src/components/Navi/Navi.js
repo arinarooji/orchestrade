@@ -76,7 +76,8 @@ export default withAuth(class Navi extends Component {
                   </DropdownItem>
                   <DropdownItem>
                     <NavLink
-                      href="javascript:void(0)"
+                      // href="javascript:void(0)"
+                      href="/" //Redirect to home on logout
                       onClick={this.props.auth.logout}
                     >Log Out
                       </NavLink>
