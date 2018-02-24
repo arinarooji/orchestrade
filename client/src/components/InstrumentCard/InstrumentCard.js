@@ -7,17 +7,7 @@ import {
   CardTitle,
   CardSubtitle,
   Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Form,
-  FormGroup,
-  Label, 
-  Input,
-  FormText
 } from "reactstrap";
-import Request from "../Request";
 import "./InstrumentCard.css"
 
 const InstrumentCard = props => {

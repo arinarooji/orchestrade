@@ -1,6 +1,6 @@
 import React from "react";
-import css from "css-loader";
-import styles from "./Footer.css";
+// import css from "css-loader";
+import "./Footer.css";
 
 const Footer = props => {
   return (

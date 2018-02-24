@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Button, Form, Row, FormGroup, Label, Col, Container, Input, FormText, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import Navi from "../../components/Navi";
+import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Search from "../../components/Search";
 //import Request from "../../components/Request"
 import InstrumentCard from "../../components/InstrumentCard";

@@ -1,31 +1,46 @@
-// const path = require("path");
 const router = require("express").Router();
-// const apiRoutes = require("./api");
+const okta = require('@okta/okta-sdk-nodejs');
 var mailgun = require("mailgun-js");
 var mailgun = require('mailgun-js')({
-  apiKey: "key-98a79e175b5f3236260b2046fc64c6fe",
-  domain: "https://api.mailgun.net/v3/sandboxd7819a789d23412581323c5ab0971dd5.mailgun.org"
+  apiKey: "key-4bc819de1c6711499f7e3483c1f62296",
+  domain: "sandbox070c5e1ec6d0415095e68a9742c5a5c0.mailgun.org"
 });
 
 //mailgun 
-router.post('/browse', function (req, res) {
-  let length = req.body.length;
-  let email = req.body.email;
-  let name = req.body.name;
-  let instrument = req.body.instrument
-  const output = `
-      <p>One of your instruments have been requested</p>
-      <ul>
-          <li> Name: ${req.body.name}</li>
-          <li> Email: ${req.body.email}</li>
-          <li> Phone: ${req.body.instrument}</li>
-          <li> Length: ${req.body.length}</li>
-      </ul>
+// matches with "/api/mail"
+router.route('/')
+    .post(function (req, res) {
+    console.log("mailing");
+    client.getUser('me')
+        .then(user => {
+        console.log(user);
+    });
+
+//   let length = req.body.length;
+//   let email = req.body.email;
+//   let name = req.body.name;
+//   let instrument = req.body.instrument
+//   const output = `
+//       <p>One of your instruments have been requested</p>
+//       <ul>
+//           <li> Name: ${req.body.name} </li>
+//           <li> Email: ${req.body.email}</li>
+//           <li> Phone: ${req.body.instrument}</li>
+//           <li> Length: ${req.body.length}</li>
+//       </ul>
+//     `
+    const output = `
+        <p>You have a new Orchestrade instrument request!</p>
+
+        <li> Name: Demo User </li>
+        <li> Email: email@gmail.com</li>
+        <li> Phone: Trombone</li>
+        <li> Length: 1 Semester</li>
     `
   
-  var data = {
-      from: 'Orchestrade <postmaster@sandboxd7819a789d23412581323c5ab0971dd5.mailgun.org> ',
-      to: 'portillacris@gmail.com',
+  const data = {
+      from: 'Orchestrade <postmaster@sandbox070c5e1ec6d0415095e68a9742c5a5c0.mailgun.org> ',
+      to: 'treadam9115@gmail.com',
       subject: 'An Instrument Request',
       text: 'Testing some Mailgun awesomness!',
       html: output,

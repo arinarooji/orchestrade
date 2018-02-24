@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Navi from "../../components/Navi";
 import Footer from "../../components/Footer";
 import "./SettingsPage.css";
 import PrivacyPolicy from "../../components/PrivacyPolicy";
@@ -17,7 +16,7 @@ class Settings extends Component {
   clickedPage = event => {
     const linkClicked = event.currentTarget.dataset.value;
     this.setState({ page: linkClicked }, function() {
-      const whichPage = this.state.page;
+      // const whichPage = this.state.page;
     });
   };
 

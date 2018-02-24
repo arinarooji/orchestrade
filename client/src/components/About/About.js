@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 //import image from '../image/1.jpg'
 
 export default class About extends React.Component {

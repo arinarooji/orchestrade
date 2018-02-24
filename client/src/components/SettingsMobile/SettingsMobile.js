@@ -2,7 +2,6 @@ import React from "react";
 import {
   Card,
   CardBody,
-  Button
 } from "reactstrap";
 
 const SettingsMobile = props => {

@@ -3,11 +3,7 @@ import {
   Carousel,
   CarouselItem,
   CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
-  Container,
-  Row,
-  Col
+  Row
 } from "reactstrap";
 import "./Carousel.css";
 

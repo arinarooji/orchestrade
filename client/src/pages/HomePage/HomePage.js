@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Navi from "../../components/Navi";
 import Tilt from "react-tilt";
 import Carousel from "../../components/Carousel";
 import About from "../../components/About";

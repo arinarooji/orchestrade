@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, InputGroup, InputGroupAddon, Input } from 'reactstrap';
-import Navi from "../../components/Navi";
 import Add from "../../components/Add";
 import InstrumentCard from "../../components/InstrumentCard";
 import Footer from "../../components/Footer";
