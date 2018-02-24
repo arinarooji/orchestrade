@@ -57,9 +57,6 @@ export default withAuth(class Navi extends Component {
                 <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/about">About</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="/browse">Browse</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
@@ -99,9 +96,6 @@ export default withAuth(class Navi extends Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/about">About</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/browse">Browse</NavLink>

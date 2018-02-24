@@ -3,22 +3,14 @@ import React, { Component } from "react";
 import OktaAuth from '@okta/okta-auth-js';
 import { withAuth } from '@okta/okta-react';
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Form,
-  Label,
-  Input,
+  Container,
+  Row,
+  Col,
   Button,
-  Small
+  Form,
+  FormGroup,
+  Input,
+  Label
 } from "reactstrap";
 
 export default withAuth(class Login extends Component {
@@ -32,20 +24,9 @@ export default withAuth(class Login extends Component {
     }
 
     this.oktaAuth = new OktaAuth({ url: props.baseUrl });
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUsernameChange = this.handleUsernameChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-  };
-}
-
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
   }
 
   handleSubmit(e) {
@@ -58,7 +39,7 @@ export default withAuth(class Login extends Component {
         sessionToken: res.sessionToken
       }))
       .catch(err => {
-        this.setState({error: err.message});
+        this.setState({ error: err.message });
         console.log(err.statusCode + ' error', err)
       });
   }
@@ -77,55 +58,49 @@ export default withAuth(class Login extends Component {
       return null;
     }
 
-    const errorMessage = this.state.error ? 
-    <span className="error-message">{this.state.error}</span> : 
-    null;
+    const errorMessage = this.state.error ?
+      <span className="error-message">{this.state.error}</span> :
+      null;
 
     return (
-      <div>
-        <Navbar color="faded" light expand="md">
-          <div className="container">
-            <NavbarBrand href="/home">Orchestrade</NavbarBrand>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
-              <Form className="form-inline mr-4" onSubmit={this.handleSubmit}>
+      <div className="bg-light">
+        <Container className="py-3">
+          <Row>
+            <Col lg="4"> </Col>
+            <Col xs="12" lg="4" className="py-3">
+              <h1>Welcome Back!</h1>
+              <Form onSubmit={this.handleSubmit}>
                 {errorMessage}
-                <div className="form-group">
-                <Input 
-                className="form-control form-control-sm mr-sm-2" 
-                placeholder="Username" 
-                id="username" 
-                type="text"
-                value={this.state.username}
-                onChange={this.handleUsernameChange} 
-                />
-                </div>
-                <div className="form-group">
-                <Input 
-                className="form-control form-control-sm mr-sm-2" 
-                placeholder="Password" 
-                id="password" 
-                type="password"
-                value={this.state.password}
-                onChange={this.handlePasswordChange}
-                />
-                </div>
-                <Button 
-                className="btn btn-sm btn-outline-secondary my-2 my-sm-0"
-                id="submit" 
-                type="submit" 
-                value="Submit"
-                >Log in
-                </Button>
-                <div className="ml-2">
-                <small className="form-text text-muted"><a href="">Forgot account?</a></small>
-                </div>
+                <FormGroup>
+                  <Label for="username"></Label>
+                  <Input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Enter your Email"
+                    value={this.state.username}
+                    onChange={this.handleUsernameChange}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="password"></Label>
+                  <Input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Enter your Password"
+                    value={this.state.password}
+                    onChange={this.handlePasswordChange}
+                  />
+                </FormGroup>
+                <FormGroup className="text-center">
+                  <Button className="btn btn-sm btn-outline-secondary my-2 my-sm-0" type="submit">Log in</Button>
+                </FormGroup>
               </Form>
-              </Nav>
-            </Collapse>
-          </div>
-        </Navbar>
+            </Col>
+            <Col lg="4"> </Col>
+          </Row>
+        </Container>
       </div>
     );
   }
