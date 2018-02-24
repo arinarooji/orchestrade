@@ -47,7 +47,7 @@ export default withAuth(class Navi extends Component {
   render() {
     if (this.state.authenticated === null) return null;
     const authNav = this.state.authenticated ?
-      <Navbar color="faded" light expand="md" className="auth-nav">
+      <Navbar color="faded" light expand="md" className="auth-nav" id="mainNav">
         <div className="container">
           <NavbarBrand href="/">Orchestrade</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -55,9 +55,6 @@ export default withAuth(class Navi extends Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/about">About</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/browse">Browse</NavLink>
@@ -91,7 +88,7 @@ export default withAuth(class Navi extends Component {
         </div>
       </Navbar>
       :
-      <Navbar color="faded" light expand="md" className="auth-nav">
+      <Navbar color="faded" light expand="md" className="auth-nav" id="mainNav">
         <div className="container">
           <NavbarBrand href="/">Orchestrade</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -101,12 +98,12 @@ export default withAuth(class Navi extends Component {
                 <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/about">About</NavLink>
+                <NavLink href="/login" onClick={this.props.auth.login}>Log In</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/browse">Browse</NavLink>
+                <NavLink href="/signup">Sign Up</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
+              {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Account
             </DropdownToggle>
@@ -129,7 +126,7 @@ export default withAuth(class Navi extends Component {
                 </NavLink>
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </UncontrolledDropdown> */}
             </Nav>
           </Collapse>
         </div>
