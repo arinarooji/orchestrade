@@ -30,10 +30,10 @@ class ManagePage extends Component {
   renderInventory = (inventory) => {
     if(inventory.length !== undefined) {
       return (
-        <div className="inventorySect col-12 px-0 mx-0">
+        <div className="inventorySect col-12 py-4 px-0 mx-0">
           <ul className="list-inline list-unstyled px-0 mx-0">
             {inventory.map(inv => (
-              <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 px-0 mx-0">
+              <li className="list-inline-item col-xs-12 col-sm-6 col-md-4 pb-4 px-0 mx-0">
                 <InstrumentCard
                   key={inv._id}
                   uniqueId={inv._id}
