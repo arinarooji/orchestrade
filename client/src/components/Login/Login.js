@@ -68,33 +68,33 @@ export default withAuth(class Login extends Component {
           <Row>
             <Col lg="4"> </Col>
             <Col xs="12" lg="4" className="py-3">
-              <h1>Welcome Back!</h1>
+              <h1 className="text-center font-weight-light">Welcome Back!</h1>
               <Form onSubmit={this.handleSubmit}>
                 {errorMessage}
                 <FormGroup>
-                  <Label for="username"></Label>
+                  <Label for="username">Email</Label>
                   <Input
                     type="text"
                     name="username"
                     id="username"
-                    placeholder="Enter your Email"
+                    placeholder=""
                     value={this.state.username}
                     onChange={this.handleUsernameChange}
                   />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="password"></Label>
+                  <Label for="password">Password</Label>
                   <Input
                     type="password"
                     name="password"
                     id="password"
-                    placeholder="Enter your Password"
+                    placeholder=""
                     value={this.state.password}
                     onChange={this.handlePasswordChange}
                   />
                 </FormGroup>
                 <FormGroup className="text-center">
-                  <Button className="btn btn-sm btn-outline-secondary my-2 my-sm-0" type="submit">Log in</Button>
+                  <Button className="btn btn-sm btn-outline-primary my-4 btn-block" type="submit">Log in</Button>
                 </FormGroup>
               </Form>
             </Col>

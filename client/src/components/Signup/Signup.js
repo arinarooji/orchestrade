@@ -101,7 +101,7 @@ export default withAuth(class Signup extends Component{
             />
           </Col>
           <Col xs="12" lg="4" className="py-3">
-          <h1>Create an Account</h1>
+          <h1 className="text-center font-weight-light">Create an Account</h1>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
                 <Label for="school">School</Label>
@@ -148,7 +148,7 @@ export default withAuth(class Signup extends Component{
                 />
               </FormGroup>
               <FormGroup className="text-center">
-              <Button className="btn btn-sm btn-outline-secondary my-2 my-sm-0" type="submit">Sign Up</Button>
+              <Button className="btn btn-sm btn-outline-primary my-4 btn-block" type="submit">Sign Up</Button>
               </FormGroup>
             </Form>
           </Col>
