@@ -11,7 +11,7 @@ db.once('open', function() {
 });
 
 // We will need to create an .env with our new mlab DB
-mongoose.connect(process.env.MURL || "mongodb://localhost/orchestradeDB");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/orchestradeDB");
 
 // mongoose.connect('mongodb://localhost/orchestradeDB');
 //Schema

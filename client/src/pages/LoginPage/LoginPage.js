@@ -28,7 +28,7 @@ export default withAuth(class LoginPage extends Component {
   render() {
     if (this.state.authenticated === null) return null;
     return this.state.authenticated ?
-      <Redirect to={{ pathname: '/settings' }} /> :
+      <Redirect to={{ pathname: '/home' }} /> :
       <Login baseUrl={this.props.baseUrl} />;
   }
 });
