@@ -21,7 +21,7 @@ export default class Request extends React.Component {
     <div>
       <Button color="danger" onClick={this.toggle}>Request Instrument</Button>
       <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-        <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+        <ModalHeader toggle={this.toggle}>Request Form</ModalHeader>
         <ModalBody>
           <Form method ="POST">          
             <FormGroup>
