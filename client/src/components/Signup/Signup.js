@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import OktaAuth from '@okta/okta-auth-js';
+import Footer from "../Footer";
 import { withAuth } from '@okta/okta-react';
 import config from '../../app.config';
 
@@ -155,6 +156,7 @@ export default withAuth(class Signup extends Component{
           </Col>
         </Row>
       </Container>
+      <Footer />
     </div>
     );
   }
