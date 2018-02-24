@@ -41,6 +41,7 @@ class ManagePage extends Component {
                   brand={inv.brand}
                   instrument={inv.instrumentName}
                   school={inv.school}
+                  details={inv.details}
                   action="Remove Instrument" //The innerHTML of the button
                   clickEvent={this.handleManageClick} //The button's page specific click event (deleting intruments)
                 />

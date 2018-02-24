@@ -32,10 +32,10 @@ const InstrumentCard = props => {
         />
         <CardBody>
           <CardTitle>
-            {props.instrument} ({props.brand})
+            <strong>{props.instrument}</strong> ({props.brand})
           </CardTitle>
-          <CardSubtitle>Hosted By: {props.school}</CardSubtitle>
-          <CardText>Some quick details about the {props.instrument}.</CardText>
+          <CardSubtitle>{props.school}</CardSubtitle>
+          <CardText>{props.details}</CardText>
           <Button className="btn-block" onClick={props.clickEvent} uniqueId={props.uniqueId} data-instrument={props.instrument} data-src={props.link} type="submit">{props.action}</Button>
         </CardBody>
       </Card>

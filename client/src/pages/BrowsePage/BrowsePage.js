@@ -107,6 +107,7 @@ class BrowsePage extends Component {
                 brand={cat.brand}
                 instrument={cat.instrumentName}
                 school={cat.school}
+                details={cat.details}
                 action="Request Instrument" //The innerHTML of the button
                clickEvent={this.toggle} //The button's page specific click event (requesting intruments)
               />

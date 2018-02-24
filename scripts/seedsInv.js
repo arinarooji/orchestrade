@@ -20,7 +20,8 @@ const testInstruments = [
         type: "Brass",
         brand: "Conn",
         image: "https://rettigmusic.com/wp-content/uploads/2016/03/Conn-88HO-Trombone-Header-400x400.jpg",
-        isAvailable: "true"
+        isAvailable: "true",
+        details: "Information about the instrument."
     },
     {
         schoolId: 1,
@@ -29,7 +30,8 @@ const testInstruments = [
         type: "String",
         brand: "Cecilo",
         image: "https://pbs.twimg.com/profile_images/525738518258012160/Uzrm1CaT_400x400.jpeg",
-        isAvailable: "true"
+        isAvailable: "true",
+        details: "Information about the instrument."
     },
     {
         schoolId: 3,
@@ -38,34 +40,8 @@ const testInstruments = [
         type: "Woodwind",
         brand: "King",
         image: "https://www.matthewsmuziek.nl/media/catalog/product/cache/2/small_image/400x/9df78eab33525d08d6e5fb8d27136e95/k/i/king_-_altosax_-_zephyr_vintage-4.jpg",
-        isAvailable: "true"
-    },
-    {
-        schoolId: 4,
-        instrumentName: "Trombone",
-        school: "Garner Magnet High School",
-        type: "Brass",
-        brand: "Conn",
-        image: "https://rettigmusic.com/wp-content/uploads/2016/03/Conn-88HO-Trombone-Header-400x400.jpg",
-        isAvailable: "true"
-    },
-    {
-        schoolId: 5,
-        instrumentName: "Violin",
-        school: "South View High School",
-        type: "String",
-        brand: "Cecilo",
-        image: "https://pbs.twimg.com/profile_images/525738518258012160/Uzrm1CaT_400x400.jpeg",
-        isAvailable: "true"
-    },
-    {
-        schoolId: 6,
-        instrumentName: "Saxophone",
-        school: "Seventy-First High School",
-        type: "Woodwind",
-        brand: "King",
-        image: "https://www.matthewsmuziek.nl/media/catalog/product/cache/2/small_image/400x/9df78eab33525d08d6e5fb8d27136e95/k/i/king_-_altosax_-_zephyr_vintage-4.jpg",
-        isAvailable: "true"
+        isAvailable: "true",
+        details: "Information about the instrument."
     }
 
 ]

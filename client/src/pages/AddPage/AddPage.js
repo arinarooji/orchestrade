@@ -70,11 +70,11 @@ class AddPage extends Component {
         isAvailable: true,
         schoolId: "1", //Obtained from user info
         instrumentName: results.data.instrumentName,
-        school: "Obtained from user info",
+        school: "Example High School",
         type: results.data.type,
         brand: this.state.brandInput,
-        image: results.data.image
-        //details: this.state.detailsInput
+        image: results.data.image,
+        details: this.state.detailsInput
       }
 
       //Save the newly created instrument to the inventory collection

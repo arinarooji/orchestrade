@@ -36,6 +36,10 @@ const inventorySchema = new Schema({
     type: String,
     required: true
   },
+  details: {
+    type: String,
+    required: true
+  },
   isAvailable: {
     type: Boolean,
     required: true,
