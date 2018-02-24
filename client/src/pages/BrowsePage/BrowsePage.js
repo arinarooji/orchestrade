@@ -93,7 +93,7 @@ class BrowsePage extends Component {
     const stateRender = theState;
     return (
       <div className="inventorySect col-12 px-0 mx-0">
-        <h1 class="available">Available Instruments</h1>
+        <h1 class="available font-weight-light py-2">Available Instruments</h1>
         <ul className="list-inline list-unstyled px-0 mx-0">
           {stateRender.map(cat => (
             <li
@@ -137,14 +137,15 @@ class BrowsePage extends Component {
         <ModalBody>
           <Form method ="POST">          
             <FormGroup>
-              <Label for="length"><strong>Select the length you want to borrow Instrument</strong></Label> 
+              <Label for="length"><strong>How long do you need this instrument?</strong></Label> 
               <Input type="select" name="length" id="length">
                 <option>3 Days</option>
                 <option>1 Week</option>
+                <option>1 Month</option>
                 <option>1 Semester</option>
               </Input>
             </FormGroup>
-            <FormGroup>
+            {/* <FormGroup>
               <Label for="email"><strong>Provide an email address to best contact you</strong></Label>
               <Input type="text" name="email" id="email" />
             </FormGroup>          
@@ -153,9 +154,9 @@ class BrowsePage extends Component {
               <Input type="text" name="name" id="name" />
             </FormGroup>
             <FormGroup>
-              <Label for="instrument"><strong>Name any specific insturment you would like to borrow</strong></Label>
+              <Label for="instrument"><strong>Name any specific instrument you would like to borrow</strong></Label>
               <Input type="text" id="instrument" placeholder="Instrument" />
-            </FormGroup>
+            </FormGroup> */}
           </Form>            
         </ModalBody>          
         <ModalFooter>
