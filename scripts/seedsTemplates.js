@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 // mongoose.Promise = global.Promise;
 
-// This file empties the Books collection and inserts the books below
-
+//cd into /scripts and run this file to add the templates collection
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/orchestradeDB",
     {
@@ -11,7 +10,7 @@ mongoose.connect(
     }
 );
 
-//Sample data here...
+//Instrument templates for the user to create their instruments from
 const instrumentTemplates = [
     //BRASS
     {
@@ -83,6 +82,130 @@ const instrumentTemplates = [
         image: "http://media.musiciansfriend.com/is/image/MMGS7/MDG-330-Mini-Grand-Digital-Piano/J19266000000000-00-500x500.jpg",
     },
     //KEYBOARD
+
+    //PERCUSSION
+    {
+        instrumentName: "Bass Drum",
+        type: "Percussion",
+        image: "http://media.guitarcenter.com/is/image/MMGS7/Reference-Bass-Drum-Scarlet-Fade-24-x-18-in./446699000655491-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Bongo Drums",
+        type: "Percussion",
+        image: "http://media.guitarcenter.com/is/image/MMGS7/Traditional-Wood-Bongos/473444000000000-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Cymbal",
+        type: "Percussion",
+        image: "http://media.musiciansfriend.com/is/image/MMGS7/A-Series-Crash-Ride-Cymbal-20-in./443832000000089-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Floor Tom",
+        type: "Percussion",
+        image: "http://media.guitarcenter.com/is/image/MMGS7/Live-Custom-Oak-Floor-Tom-18-x-16-in.-Black-Shadow-Sunburst/J11247000001001-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Hi Hat",
+        type: "Percussion",
+        image: "http://www.xm-world.com/images/product120802531755779.jpg",
+    },
+    {
+        instrumentName: "Marching Percussion",
+        type: "Percussion",
+        image: "http://media.guitarcenter.com/is/image/MMGS7/High-Tension-Marching-Snare-Drum-with-Carrier-14-x-12-White/J14944000002001-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Rack Tom",
+        type: "Percussion",
+        image: "http://media.musiciansfriend.com/is/image/MMGS7/Vision-Birch-Tom-Jet-Black-12x9/H71970000001001-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Rainstick",
+        type: "Percussion",
+        image: "http://media.musiciansfriend.com/is/image/MMGS7/Chilean-Rainstick-20-in./449630000000089-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Snare Drum",
+        type: "Percussion",
+        image: "http://media.musiciansfriend.com/is/image/MMGS7/Vision-Birch-Snare-Drum-Black-with-Black-Hardware-14x5.5/583136000001325-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Triangle",
+        type: "Percussion",
+        image: "http://moziru.com/images/triangle-clipart-music-instrument-8.jpg",
+    },
+    //PERCUSSION
+
+    //STRING
+    {
+        instrumentName: "Violin",
+        type: "String",
+        image: "http://media.guitarcenter.com/is/image/MMGS7/Prelude-Series-Violin-Outfit-1-8-Size/J05662000001000-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Viola",
+        type: "String",
+        image: "http://www.sharmusic.com/productimages/image.axd/i.kjs70v165/w.500/h.500/karl+joseph+schneider+%23174%3B+premier+viola+-+16.5+inch_.jpg",
+    },
+    {
+        instrumentName: "Cello",
+        type: "String",
+        image: "https://www.bassbags.co.uk/wp-content/uploads/2015/05/P200-cello-front.jpg",
+    },
+    {
+        instrumentName: "Double Bass",
+        type: "String",
+        image: "http://media.guitarcenter.com/is/image/MMGS7/Academy-Series-Double-Bass-Outfit-1-2/J31593000002000-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Acoustic Guitar",
+        type: "String",
+        image: "http://media.guitarcenter.com/is/image/MMGS7/2018-J-15-Walnut-Burst-Acoustic-Electric-Guitar-Walnut-Burst/K45458000001000-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Electric Guitar",
+        type: "String",
+        image: "http://media.guitarcenter.com/is/image/MMGS7/2017-Les-Paul-Standard-T-Electric-Guitar-Heritage-Cherry-Sunburst/J45014000001000-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Bass Guitar",
+        type: "String",
+        image: "http://media.musiciansfriend.com/is/image/MMGS7/Standard-Precision-Bass-Guitar-Brown-Sunburst-Gloss-Maple-Fretboard/H76529000005001-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Harp",
+        type: "String",
+        image: "http://media.guitarcenter.com/is/image/MMGS7/Sharpsicle-Harp-Natural-Maple/475017000914000-00-500x500.jpg",
+    },
+    //String
+
+    //WOODWIND
+    {
+        instrumentName: "Bassoon",
+        type: "Woodwind",
+        image: "http://media.musiciansfriend.com/is/image/MMGS7/ABN-41S-Bassoon-Varnished-Maple/464444000917000-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Clarinet",
+        type: "Woodwind",
+        image: "https://media.wwbw.com/is/image/MMGS7/Recital-Model-Bb-Clarinet/463106000000000-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Flute",
+        type: "Woodwind",
+        image: "http://media.musiciansfriend.com/is/image/MMGS7/695-Dolce-Vigore-Professional-Series-Open-Hole-Flute-B-Foot-Split-E-C-Trill-D-Roller/J14681000001000-00-500x500.jpg",
+    },
+    {
+        instrumentName: "Oboe",
+        type: "Woodwind",
+        image: "https://ae01.alicdn.com/kf/HTB1zxeUQFXXXXa8XpXXq6xXFXXXj/New-semiautomatic-oboe-C-key-full-conservatory.jpg",
+    },
+    {
+        instrumentName: "Piccolo",
+        type: "Woodwind",
+        image: "https://media.wwbw.com/is/image/MMGS7/JPC1010-Piccolo/460201000000000-00-500x500.jpg",
+    },
+    //WOODWIND
 ]
 const limit = 1;
 

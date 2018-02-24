@@ -2,19 +2,17 @@ import React, { Component } from "react";
 import Navi from "../../components/Navi";
 import Jumbo from "../../components/Jumbo";
 import Carousel from "../../components/Carousel";
-import About from "../../components/About";
+import AboutUs from "../../components/AboutUs";
 import Testimony from "../../components/Testimony";
 import Footer from "../../components/Footer";
+
 
 class IndexPage extends Component {
   render() {
     return (
       <div>
-        <Navi />
         <Jumbo />
-        <Carousel />
-        <About />
-        <Testimony />
+        <AboutUs />
         <Footer />
       </div>
     );

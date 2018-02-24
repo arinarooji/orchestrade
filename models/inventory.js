@@ -9,7 +9,8 @@ const Schema = mongoose.Schema;
 const inventorySchema = new Schema({
   schoolId: {
     type: String,
-    required: true
+    required: true,
+
   },
   instrumentName: {
     type: String,
@@ -35,11 +36,19 @@ const inventorySchema = new Schema({
     type: String,
     required: true
   },
+  details: {
+    type: String,
+    required: true
+  },
   isAvailable: {
     type: Boolean,
     required: true,
     default: true
-  }
+  },
+  user:{
+    type: Schema.Types.ObjectId,
+    ref: "inventory"
+  } 
 });
 
 const Inventory = mongoose.model("Inventory", inventorySchema);

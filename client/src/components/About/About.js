@@ -1,11 +1,11 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 //import image from '../image/1.jpg'
 
 export default class About extends React.Component {
   render() {
     return (
-      <div className="py-3 bg-light">
+      <div className="py-3">
         <Row>
           <Col>
             <h2 className="section-heading text-center pb-2 display-4">

@@ -41,6 +41,9 @@ class ManagePage extends Component {
                   brand={inv.brand}
                   instrument={inv.instrumentName}
                   school={inv.school}
+                  details={inv.details}
+                  action="Remove Instrument" //The innerHTML of the button
+                  clickEvent={this.handleManageClick} //The button's page specific click event (deleting intruments)
                 />
               </li>
             ))}
@@ -63,6 +66,20 @@ class ManagePage extends Component {
     });
   }
 
+  //Remove Instrument click event
+  handleManageClick = (event) => {
+
+    //Reference the mongoId of the selected instrument
+    let mongoId = event.target.getAttribute('uniqueid');
+
+    //findById and delete the instrument in inventory
+    API.deleteInstrument(mongoId).then(result => {
+      
+      //Get the user's updated inventory
+      this.getInventoryBySchoolId(this.state.schoolId);
+    });
+  }
+
   //This function renders either the entire user inventory, or the filtered inventory
   shouldRender = () => {
     //If the buttonSearch state is blank, render entire inventory (userInventory)
@@ -78,10 +95,11 @@ class ManagePage extends Component {
   render() {
     return (
       <div>
-        <Navi />
-        <Manage handleClick={this.handleClick}/>
-          {this.shouldRender()}
-        <Footer />
+        <div className="fadeIn">
+          <Manage handleClick={this.handleClick}/>
+            {this.shouldRender()}
+          <Footer />
+        </div>
       </div>
     );
   }

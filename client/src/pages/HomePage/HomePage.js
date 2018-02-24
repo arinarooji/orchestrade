@@ -1,30 +1,44 @@
 import React, { Component } from "react";
-import Navi from "../../components/Navi";
 import Tilt from "react-tilt";
+import Carousel from "../../components/Carousel";
 import About from "../../components/About";
-import "./HomePage.css";
+import Testimony from "../../components/Testimony";
+import Footer from "../../components/Footer";
+// import "./HomePage.css";
 
 class HomePage extends Component {
   render() {
     return (
       <div>
-        <Navi />
-        <Tilt className="Tilt" options={{ max: 10, scale: 1 }}>
-          <section className="text-center Tilt-inner jumbotron">
-            <div className="orgName">
-              <h1>Orchestrade</h1>
-              <p className="lead">Musica Vivit In Aeternum</p>
-              <div className="startBtn">
-                <a className="btn btn-primary" href="/login">
-                  Get Started
-                </a>
+        <div className="fadeIn">
+          <Tilt className="Tilt" options={{ max: 10, scale: 1 }}>
+            <section className="text-center Tilt-inner jumbotron">
+              <div className="orgName">
+                <h1>Orchestrade</h1>
+                <p className="lead">Musica Vivit In Aeternum</p>
+                <div className="startBtn">
+                  <a className="btn btn-primary" href="/signup">
+                    Get Started
+                  </a>
+                </div>
               </div>
+            </section>
+          </Tilt>
+          <blockquote class="blockquote quote text-center">
+            <div className="container">
+              <p class="mb-0">The true beauty of music is that it connects people. It carries a message, and we, the musicians, are the messengers.</p>
+              <footer class="blockquote-footer">Roy Ayers</footer>
             </div>
-          </section>
-        </Tilt>
-        <section className="part2">
-          <hr />
-        </section>
+          </blockquote>
+          <About />
+          <div id="carouselSection">
+            <div id="theCarousel">
+            <Carousel />
+            </div>
+          </div>
+          <Testimony />
+          <Footer />
+        </div>
       </div>
     );
   }

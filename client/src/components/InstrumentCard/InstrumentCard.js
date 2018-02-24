@@ -6,7 +6,7 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button
+  Button,
 } from "reactstrap";
 import "./InstrumentCard.css"
 
@@ -16,17 +16,17 @@ const InstrumentCard = props => {
       <Card>
         {/*  350x250 for images if possible*/}
         <CardImg
-          class="img-fluid"
+          className="img-fluid"
           src={props.link}
           alt={`Beautiful image of a ${props.brand} ${props.instrument}`}
         />
         <CardBody>
           <CardTitle>
-            {props.brand} {props.instrument}
+            <strong>{props.instrument}</strong> ({props.brand})
           </CardTitle>
-          <CardSubtitle>Hosted By: {props.school}</CardSubtitle>
-          <CardText>Some quick details about the {props.instrument}.</CardText>
-          <Button>Request</Button>
+          <CardSubtitle>{props.school}</CardSubtitle>
+          <CardText>{props.details}</CardText>
+          <Button className="btn-block" onClick={props.clickEvent} uniqueId={props.uniqueId} data-instrument={props.instrument} data-src={props.link} type="submit">{props.action}</Button>
         </CardBody>
       </Card>
     </div>
