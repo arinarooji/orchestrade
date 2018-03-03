@@ -41,5 +41,8 @@ export default {
   //Delete an instrument (ManagePage)
   deleteInstrument: function(id) {
     return axios.delete("/api/inventory/" + id);
+  },
+  sendMail: function(){
+    return axios.post("/api/mail");
   }
 };

@@ -65,17 +65,17 @@ export default withAuth(class Navi extends Component {
                   </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <NavLink href="/add">Add Instruments</NavLink>
+                    <NavLink href="/add" className="dropdown">Add Instruments</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <NavLink href="/manage">Manage Instruments</NavLink>
+                    <NavLink href="/manage" className="dropdown">Manage Instruments</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <NavLink href="/settings">Settings</NavLink>
+                    <NavLink href="/settings" className="dropdown">Settings</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <NavLink
+                    <NavLink className="dropdown"
                       // href="javascript:void(0)"
                       href="/" //Redirect to home on logout
                       onClick={this.props.auth.logout}

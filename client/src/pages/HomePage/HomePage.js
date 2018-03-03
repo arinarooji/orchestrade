@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Tilt from "react-tilt";
-import Carousel from "../../components/Carousel";
 import About from "../../components/About";
 import Testimony from "../../components/Testimony";
 import Footer from "../../components/Footer";
@@ -24,10 +23,10 @@ class HomePage extends Component {
               </div>
             </section>
           </Tilt>
-          <blockquote class="blockquote quote text-center">
+          <blockquote className="blockquote quote text-center">
             <div className="py-4">
               <p className="mb-0 lead">The true beauty of music is that it connects people. It carries a message, and we, the musicians, are the messengers.</p>
-              <footer class="blockquote-footer">Roy Ayers</footer>
+              <footer className="blockquote-footer">Roy Ayers</footer>
             </div>
           </blockquote>
           <About />

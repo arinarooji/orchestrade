@@ -4,7 +4,7 @@ import Search from "../../components/Search";
 //import Request from "../../components/Request"
 import InstrumentCard from "../../components/InstrumentCard";
 import Footer from "../../components/Footer";
-import "./BrowsePage.css"
+import "./BrowsePage.css";
 import API from "../../utils/API";
 
 class BrowsePage extends Component {
@@ -86,6 +86,9 @@ class BrowsePage extends Component {
     });
   }
 
+  sendMail = event => {
+    API.sendMail().then(this.setState({modal: !this.state.modal}))
+  }
 
   // looping through the inventory state and passing the inventory properties to each item defined
   renderInventory = theState => {
@@ -164,7 +167,7 @@ class BrowsePage extends Component {
           </Form>            
         </ModalBody>          
         <ModalFooter className="bg-dark">
-          <Button color="primary" onClick={this.toggle}>Send Request Email</Button>
+          <Button color="primary" onClick={this.sendMail}>Send Request Email</Button>
         </ModalFooter>
       </Modal>
         <Footer />

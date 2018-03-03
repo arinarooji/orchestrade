@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import Login from "../../components/Login";
 import Footer from "../../components/Footer";
-import OktaAuth from '@okta/okta-auth-js';
 import { withAuth } from '@okta/okta-react';
-import API from "../../utils/API";
 
 export default withAuth(class LoginPage extends Component {
   constructor(props) {
