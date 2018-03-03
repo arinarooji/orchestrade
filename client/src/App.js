@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { SecureRoute, ImplicitCallback } from '@okta/okta-react';
+import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
 import './App.css';
 import config from './app.config';
 import LoginPage from './pages/LoginPage'
@@ -12,6 +12,9 @@ import SettingsPage from './pages/SettingsPage'
 import Navi from './components/Navi'
 import Signup from './components/Signup'
 
+function onAuthRequired({history}) {
+  history.push('/login');
+}
 
 class App extends Component {
   render() {
@@ -22,15 +25,20 @@ class App extends Component {
           <Navi />
           {/* <img class="loadingImg fadeOut spin" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/800px-React-icon.svg.png" /> */}
             <Switch>
-              <Route exact path="/" component={HomePage}/>
-              <Route exact path="/login" render={() => <LoginPage baseUrl={config.url} />}/>
-              <Route exact path="/implicit/callback" component={ImplicitCallback} />
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/browse" component={BrowsePage} />
-              <Route exact path="/add" component={AddPage} />
-              <Route exact path="/manage" component={ManagePage} />              
-              <SecureRoute exact path="/settings" component={SettingsPage} />
-              <Route component={HomePage} />
+              <Security issuer={config.issuer}
+                    client_id={config.client_id}
+                    redirect_uri={window.location.origin + '/implicit/callback'}
+                    onAuthRequired={onAuthRequired} >
+                <Route exact path="/" component={HomePage}/>
+                <Route exact path="/login" render={() => <LoginPage baseUrl={config.url} />}/>
+                <Route exact path="/signup" component={Signup} />
+                <SecureRoute exact path="/browse" component={BrowsePage} />
+                <SecureRoute exact path="/add" component={AddPage} />
+                <SecureRoute exact path="/manage" component={ManagePage} />              
+                <SecureRoute exact path="/settings" component={SettingsPage} />
+                <Route exact path="/implicit/callback" component={ImplicitCallback} />
+                {/* <Route component={HomePage} /> */}
+              </Security>
             </Switch>
           </div>
         </Router>
